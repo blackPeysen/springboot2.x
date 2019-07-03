@@ -15,9 +15,10 @@ import java.util.stream.Stream;
 @Profile("java8")
 @Service
 public class Java8CalculateServiceImpl implements CalculateService {
+
     @Override
     public Integer sum(Integer... values) {
-        System.out.println("Java7CalculateServiceImpl");
+        System.out.println("Java8CalculateServiceImpl");
         int sum=Stream.of(values).reduce(0,Integer::sum);
 
         return sum;

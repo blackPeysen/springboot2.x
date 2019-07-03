@@ -13,6 +13,7 @@ import org.springframework.stereotype.Service;
 @Profile("java7")
 @Service
 public class Java7CalculateServiceImpl implements CalculateService {
+
     @Override
     public Integer sum(Integer... values) {
         System.out.println("Java7CalculateServiceImpl");
@@ -24,4 +25,5 @@ public class Java7CalculateServiceImpl implements CalculateService {
 
         return sum;
     }
+
 }
