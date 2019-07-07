@@ -1,6 +1,7 @@
 package com.org.peysen.bootcontext;
 
 import org.springframework.boot.SpringApplication;
+import org.springframework.boot.WebApplicationType;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 
@@ -11,6 +12,7 @@ public class BootContextApplication {
 
 
         SpringApplication.run(BootContextApplication.class, args);
+
     }
 
 }

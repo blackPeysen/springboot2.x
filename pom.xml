@@ -5,6 +5,7 @@
     <modules>
         <module>boot-common</module>
         <module>boot-context</module>
+        <module>boot-rabbitMq</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>

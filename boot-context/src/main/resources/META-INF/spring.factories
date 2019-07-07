@@ -1,0 +1,9 @@
+# Initializers
+org.springframework.context.ApplicationContextInitializer=\
+com.org.peysen.bootcontext.context.AfterHelloWorldApplicationContextInitializer,\
+com.org.peysen.bootcontext.context.HelloWorldApplicationContextInitializer
+
+# Application Listeners
+org.springframework.context.ApplicationListener=\
+com.org.peysen.bootcontext.listener.AfterHelloWorldApplicationListener,\
+com.org.peysen.bootcontext.listener.HelloWorldApplicationListener
