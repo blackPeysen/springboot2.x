@@ -4,7 +4,7 @@ import com.org.peysen.bootrabbitmq.entity.Order;
 import org.apache.ibatis.annotations.Mapper;
 
 /**
- * @Description: java类作用描述
+ * @Description: Order DAO
  * @Author: peysen
  * @CreateDate: 2019/7/8 21:36
  * @UpdateRemark: The modified content

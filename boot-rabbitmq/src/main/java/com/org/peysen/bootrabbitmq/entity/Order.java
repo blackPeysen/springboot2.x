@@ -3,7 +3,7 @@ package com.org.peysen.bootrabbitmq.entity;
 import java.io.Serializable;
 
 /**
- * @Description: java类作用描述
+ * @Description: 订单实体类
  * @Author: peysen
  * @CreateDate: 2019/7/7 18:48
  * @UpdateRemark: The modified content

@@ -22,7 +22,10 @@ spring:
     testOnReturn: false
     poolPreparedStatements: true
     maxPoolPreparedStatementPerConnectionSize: 20
+    #配置在boot启动时运行sql脚本
+    initialization-mode: always
     schema: classpath:schema.sql
+
 
 
 
