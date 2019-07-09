@@ -22,7 +22,7 @@ public class TopicReceiver {
     // queues是指要监听的队列的名字
     @RabbitListener(queues = "order-queue")
     public void receiveTopic(Order order) {
-        System.out.println("【receiveTopic1监听到消息】" + order.toString());
+        System.out.println("【receive---queue监听到消息】" + order.toString());
 
     }
 

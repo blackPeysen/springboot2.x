@@ -27,7 +27,7 @@ public class OrderSender implements Sender<Order>{
 
         rabbitTemplate.convertAndSend(
                 "order-exchange",
-                "order-adbc",
+                "order.#",
                 order,
                 correlationData);
 
