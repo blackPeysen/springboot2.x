@@ -4,3 +4,28 @@ spring:
     username: guest
     password: guest
     virtual-host: /
+
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/springboot?useUnicode=true&characterEncoding=utf-8
+    username: root
+    password: root
+#下面Spring的配置文件基本就不用修改了
+    initialSize: 5
+    minIdle: 5
+    maxActive: 20
+    maxWait: 60000
+    timeBetweenEvictionRunsMillis: 60000
+    minEvictableIdleTimeMillis: 300000
+    testWhileIdle: true
+    testOnBorrow: false
+    testOnReturn: false
+    poolPreparedStatements: true
+    maxPoolPreparedStatementPerConnectionSize: 20
+    schema: classpath:schema.sql
+
+
+
+mybatis:
+  mapper-locations: classpath:mapper/*Mapper.xml
+

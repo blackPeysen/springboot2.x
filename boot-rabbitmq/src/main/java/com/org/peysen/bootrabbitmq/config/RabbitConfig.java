@@ -24,10 +24,10 @@ public class RabbitConfig {
     public static final String FANOUT_QUEUE2 = "fanout.queue2";
     public static final String FANOUT_EXCHANGE = "fanout.exchange";
 
-    //redirect模式
+    //direct模式
     public static final String DIRECT_QUEUE1 = "direct.queue1";
-    public static final String DIRECT_EXCHANGE = "direct.exchange";
     public static final String DIRECT_QUEUE2 ="direct.queue2" ;
+    public static final String DIRECT_EXCHANGE = "direct.exchange";
 
     /**
      * Topic模式
@@ -107,7 +107,7 @@ public class RabbitConfig {
 
     @Bean
     public Binding directBinding1() {
-        return BindingBuilder.bind(directQueue1()).to(directExchange()).with("direct.pwl");
+        return BindingBuilder.bind(directQueue1()).to(directExchange()).with(directQueue1().getName());
     }
 
 }
