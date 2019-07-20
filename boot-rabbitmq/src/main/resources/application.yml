@@ -4,6 +4,13 @@ spring:
     username: guest
     password: guest
     virtual-host: /
+    publisher-confirms: true
+    publisher-returns: true
+    listener:
+      direct:
+        acknowledge-mode: auto
+      simple:
+        acknowledge-mode: auto
 
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
@@ -22,13 +29,16 @@ spring:
     testOnReturn: false
     poolPreparedStatements: true
     maxPoolPreparedStatementPerConnectionSize: 20
-    #配置在boot启动时运行sql脚本
+#配置在boot启动时运行sql脚本
     initialization-mode: always
     schema: classpath:schema.sql
 
 
-
-
 mybatis:
+  typeAliasesPackage: com.org.peysen.bootrabbitmq.entity
   mapper-locations: classpath:mapper/*Mapper.xml
+
+logging:
+  level:
+    com.org.peysen.bootrabbitmq.mapper: trace
 

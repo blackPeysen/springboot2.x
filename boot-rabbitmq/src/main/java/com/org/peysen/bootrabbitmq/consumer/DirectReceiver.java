@@ -6,7 +6,7 @@ import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.stereotype.Component;
 
 /**
- * @Description: java类作用描述
+ * @Description: direct 类型交换器监听器
  * @Author: peysen
  * @CreateDate: 2019/7/9 07:44
  * @UpdateRemark: The modified content

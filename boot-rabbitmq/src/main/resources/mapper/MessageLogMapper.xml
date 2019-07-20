@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.org.peysen.bootrabbitmq.mapper.MessageLogRepository" >
+
+    <resultMap id="MessageInfoMap" type="com.org.peysen.bootrabbitmq.entity.MessageInfo" >
+        <id column="message_Id" property="messageId" jdbcType="INTEGER" />
+        <result column="message_context" property="messageContext" jdbcType="VARCHAR" />
+        <result column="try_count" property="tryCount" jdbcType="VARCHAR" />
+        <result column="status" property="status" jdbcType="VARCHAR" />
+        <result column="next_retry" property="nextRetry" jdbcType="TIMESTAMP" />
+        <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+        <result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
+    </resultMap>
+
+    <insert id="insert" parameterType="com.org.peysen.bootrabbitmq.entity.MessageInfo">
+
+        insert into t_message(message_Id, message_context, try_count, status, next_retry, create_time, update_time)
+            value(#{messageId},
+                  #{messageContext},
+                  #{tryCount},
+                  #{status},
+                  #{nextRetry,jdbcType=TIMESTAMP},
+                  #{createTime,jdbcType=TIMESTAMP},
+                  #{updateTime,jdbcType=TIMESTAMP}
+                )
+
+    </insert>
+
+
+    <select id="queryStatusAndTimeout" resultMap="MessageInfoMap">
+      <![CDATA[
+        select message_Id, message_context, try_count, status, next_retry, create_time, update_time
+        from t_message
+          where status = 0
+              and next_retry <= sysdate()
+        ]]>
+    </select>
+
+    <update id="updateStatus">
+
+        update t_message
+            set status = #{status,jdbcType=VARCHAR},
+                update_time = #{updateTime,jdbcType=TIMESTAMP}
+        where message_id = #{messageId,jdbcType=VARCHAR}
+
+    </update>
+
+    <update id="updateRetryCount">
+
+        update t_message
+            set try_count = try_count + 1,
+                update_time = #{updateTime,jdbcType=TIMESTAMP}
+        where message_id = #{messageId,jdbcType=VARCHAR}
+
+    </update>
+
+</mapper>

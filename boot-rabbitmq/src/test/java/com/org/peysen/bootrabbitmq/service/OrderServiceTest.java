@@ -7,6 +7,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import java.util.Random;
+import java.util.UUID;
+
 import static org.junit.Assert.*;
 
 /**
@@ -23,13 +26,14 @@ public class OrderServiceTest {
     private OrderService orderService;
 
     @Test
-    public void insertOrder() {
+    public void creareOrderTest() {
+        Order order = new Order();
+//        order.setId(new Random().nextInt());
+        order.setContext("Hello world");
+        order.setMessageId(System.currentTimeMillis() + "$" + UUID.randomUUID().toString());
+
+        orderService.creareOrder(order);
     }
 
-    @Test
-    public void queryOrderById() {
-        Order order = orderService.queryOrderById(1);
 
-        System.out.println("order:"+order);
-    }
 }

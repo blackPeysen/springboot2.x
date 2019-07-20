@@ -9,7 +9,7 @@ import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.stereotype.Component;
 
 /**
- * @Description: java类作用描述
+ * @Description: Topic 类型交换器监听器
  * @Author: peysen
  * @CreateDate: 2019/7/7 21:47
  * @UpdateRemark: The modified content
@@ -22,8 +22,7 @@ public class TopicReceiver {
     // queues是指要监听的队列的名字
     @RabbitListener(queues = "order-queue")
     public void receiveTopic(Order order) {
-        System.out.println("【receive---queue监听到消息】" + order.toString());
-
+        System.out.println("【order-queue队列监听到消息】" + order.toString());
     }
 
     // queues是指要监听的队列的名字
@@ -31,6 +30,7 @@ public class TopicReceiver {
     public void receiveTopic1(Order order) {
         System.out.println("【receiveTopic1监听到消息】" + order.toString());
     }
+
     @RabbitListener(queues = RabbitConfig.TOPIC_QUEUE2)
     public void receiveTopic2(Order order) {
         System.out.println("【receiveTopic2监听到消息】" + order.toString());

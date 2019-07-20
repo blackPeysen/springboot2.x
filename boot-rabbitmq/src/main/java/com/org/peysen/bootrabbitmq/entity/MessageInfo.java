@@ -10,11 +10,12 @@ import java.util.Date;
  * @UpdateRemark: The modified content
  */
 public class MessageInfo implements Serializable {
+
     private Integer messageId;
 
     private String messageContext;
 
-    private Integer tryCount;
+    private Integer tryCount = 0;
 
     private Integer status;
 

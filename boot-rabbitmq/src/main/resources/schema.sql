@@ -1,9 +1,8 @@
 --判断这张表是否存在，若存在，则跳过创建表操作
 CREATE TABLE IF NOT EXISTS `t_order` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `id` int(10) unsigned PRIMARY KEY AUTO_INCREMENT,
   `context` varchar(100) NOT NULL,
-  `message_id` varchar(128) NOT NULL,
-  PRIMARY KEY (`id`)
+  `message_id` varchar(128) NOT NULL
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8;
 
 CREATE TABLE IF NOT EXISTS `t_message` (
