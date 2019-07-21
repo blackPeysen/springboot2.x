@@ -6,6 +6,9 @@
         <fileset id="fileset" name="Spring Application Context" removed="false">
           <file>file://$MODULE_DIR$/src/main/java/com/org/peysen/bootcontext/BootContextApplication.java</file>
           <file>file://$MODULE_DIR$/src/main/java/com/org/peysen/bootcontext/bootstrap/SpringApplicationBootstrap.java</file>
+          <file>file://$MODULE_DIR$/src/main/resources/META-INF/knights.xml</file>
+          <file>file://$MODULE_DIR$/src/main/resources/META-INF/spring/spring-context.xml</file>
+          <file>file://$MODULE_DIR$/src/main/resources/META-INF/spring/user-context.xml</file>
         </fileset>
       </configuration>
     </facet>
