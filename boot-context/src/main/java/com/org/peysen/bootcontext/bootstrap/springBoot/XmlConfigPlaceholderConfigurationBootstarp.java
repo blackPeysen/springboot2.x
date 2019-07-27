@@ -1,13 +1,11 @@
-package com.org.peysen.bootcontext.bootstrap;
+package com.org.peysen.bootcontext.bootstrap.springBoot;
 
 import com.org.peysen.bootcontext.entity.User;
 import org.springframework.boot.WebApplicationType;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.ImportResource;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
  * @Description: Spring xml 配置占位符引导类

@@ -1,11 +1,10 @@
-package com.org.peysen.bootcontext.bootstrap;
+package com.org.peysen.bootcontext.bootstrap.spring;
 
+import com.org.peysen.bootcontext.bootstrap.springBoot.XmlConfigPlaceholderConfigurationBootstarp;
 import com.org.peysen.bootcontext.entity.User;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.BeanFactoryAware;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.WebApplicationType;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.builder.SpringApplicationBuilder;

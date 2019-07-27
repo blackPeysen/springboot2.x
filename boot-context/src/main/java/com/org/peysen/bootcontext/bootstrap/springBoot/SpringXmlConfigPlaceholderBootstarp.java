@@ -1,4 +1,4 @@
-package com.org.peysen.bootcontext.bootstrap;
+package com.org.peysen.bootcontext.bootstrap.springBoot;
 
 import com.org.peysen.bootcontext.entity.User;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

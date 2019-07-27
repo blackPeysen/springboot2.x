@@ -1,5 +1,6 @@
-package com.org.peysen.bootcontext.bootstrap;
+package com.org.peysen.bootcontext.bootstrap.spring;
 
+import com.org.peysen.bootcontext.bootstrap.springBoot.XmlConfigPlaceholderConfigurationBootstarp;
 import com.org.peysen.bootcontext.entity.User;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.WebApplicationType;
