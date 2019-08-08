@@ -1,8 +1,8 @@
 package com.org.peysen.bootmvc.config;
 
 import com.org.peysen.bootmvc.interceptor.AccessSignAuthInterceptor;
-import com.org.peysen.bootmvc.paramConverter.StringToDateConverter;
-import com.org.peysen.bootmvc.paramConverter.StringToOrderConverter;
+import com.org.peysen.bootmvc.converter.StringToDateConverter;
+import com.org.peysen.bootmvc.converter.StringToOrderConverter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Configurable;
 import org.springframework.context.annotation.Bean;
@@ -28,7 +28,7 @@ import java.util.List;
  * Created by mengmeng.Pei
  * 2019/8/8 9:37
  */
-//@EnableWebMvc
+
 @Configurable
 public class ParamConverterConfig implements WebMvcConfigurer {
 
@@ -54,19 +54,10 @@ public class ParamConverterConfig implements WebMvcConfigurer {
 
 
     /**
-     * Description :
-     * Group :
-     * <p>
      * 实现自定义拦截器只需要3步
      * 1、创建我们自己的拦截器类并实现 HandlerInterceptor 接口。
      * 2、创建一个Java类继承WebMvcConfigurerAdapter，并重写 addInterceptors 方法。
      * 3、实例化我们自定义的拦截器，然后将对像手动添加到拦截器链中（在addInterceptors方法中添加）。
-     *
-     * @param registry
-     * @author honghh
-     * @date 2019/3/22 0022 10:08
-     * @author honghh
-     * @date 2018/8/13 13:56
      */
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
