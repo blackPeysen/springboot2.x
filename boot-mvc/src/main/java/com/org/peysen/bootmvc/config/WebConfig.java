@@ -10,7 +10,7 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
  * @UpdateRemark: The modified content
  */
 
-@Configuration
-@EnableWebMvc
+//@Configuration
+//@EnableWebMvc
 public class WebConfig {
 }
