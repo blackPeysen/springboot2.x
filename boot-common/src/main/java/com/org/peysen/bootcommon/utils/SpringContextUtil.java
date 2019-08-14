@@ -1,4 +1,4 @@
-package com.org.peysen.bootcommon.util;
+package com.org.peysen.bootcommon.utils;
 
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.NoSuchBeanDefinitionException;

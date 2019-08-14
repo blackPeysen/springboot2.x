@@ -2,7 +2,6 @@ package com.org.peysen.bootcommon.pojo.response;
 
 import com.org.peysen.bootcommon.Constant.enums.CommonResponseEnum;
 import com.org.peysen.bootcommon.Constant.enums.IResponseEnum;
-import lombok.Data;
 
 /**
  * <p>基础返回结果</p>

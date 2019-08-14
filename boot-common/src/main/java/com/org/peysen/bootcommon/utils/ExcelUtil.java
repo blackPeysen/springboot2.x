@@ -1,4 +1,4 @@
-package com.org.peysen.bootcommon.util;
+package com.org.peysen.bootcommon.utils;
 
 import org.apache.commons.lang3.StringUtils;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
