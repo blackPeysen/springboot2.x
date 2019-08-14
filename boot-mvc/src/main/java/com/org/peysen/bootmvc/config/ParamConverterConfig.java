@@ -6,6 +6,7 @@ import com.org.peysen.bootmvc.converter.StringToOrderConverter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Configurable;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.core.Ordered;
 import org.springframework.core.convert.ConversionService;
 import org.springframework.core.convert.support.GenericConversionService;
@@ -13,8 +14,10 @@ import org.springframework.format.FormatterRegistry;
 import org.springframework.web.bind.support.ConfigurableWebBindingInitializer;
 import org.springframework.web.method.support.HandlerMethodArgumentResolver;
 import org.springframework.web.method.support.HandlerMethodReturnValueHandler;
+import org.springframework.web.servlet.LocaleResolver;
 import org.springframework.web.servlet.ViewResolver;
 import org.springframework.web.servlet.config.annotation.*;
+import org.springframework.web.servlet.i18n.SessionLocaleResolver;
 import org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 import org.springframework.web.servlet.view.JstlView;
@@ -29,7 +32,7 @@ import java.util.List;
  * 2019/8/8 9:37
  */
 
-@Configurable
+@Configuration
 public class ParamConverterConfig implements WebMvcConfigurer {
 
     @Resource
@@ -52,7 +55,6 @@ public class ParamConverterConfig implements WebMvcConfigurer {
         return resolver;
     }
 
-
     /**
      * 实现自定义拦截器只需要3步
      * 1、创建我们自己的拦截器类并实现 HandlerInterceptor 接口。
@@ -63,9 +65,9 @@ public class ParamConverterConfig implements WebMvcConfigurer {
     public void addInterceptors(InterceptorRegistry registry) {
         InterceptorRegistration registration = registry.addInterceptor(accessSignAuthInterceptor);
         // 拦截配置
-        registration.addPathPatterns("/converter/**");
+        registration.addPathPatterns("/converter/*");
         // 排除配置
-        registration.excludePathPatterns("/converter/test");
+        //registration.excludePathPatterns("/converter/test");
     }
 
     @Override
@@ -74,6 +76,7 @@ public class ParamConverterConfig implements WebMvcConfigurer {
         registry.addConverter(new StringToDateConverter());
         registry.addConverter(new StringToOrderConverter());
     }
+
 
     @PostConstruct
     public void init(){

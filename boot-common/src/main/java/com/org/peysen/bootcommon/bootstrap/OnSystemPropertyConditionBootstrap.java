@@ -14,7 +14,7 @@ import org.springframework.context.annotation.Configuration;
  * @UpdateRemark: The modified content
  */
 
-@Configuration
+//@Configuration
 public class OnSystemPropertyConditionBootstrap {
 
     @Bean

@@ -468,7 +468,7 @@ public class DateUtil {
         return date;
     }
 
-    // 将一个日期字符串转化成java.util.Date日期
+    // 将一个日期字符串转化成java.utils.Date日期
     // 字符串格式为yyyy-MM-dd
     public static Date parseStringToUtilDate(String strDate) {
 

@@ -23,7 +23,7 @@ import java.util.concurrent.TimeUnit;
 public final class RedisUtil {
 
     @Autowired
-    private RedisTemplate<String, Object> redisTemplate;
+    private RedisTemplate<String,Object> redisTemplate;
 
     /**
      * 指定缓存失效时间
@@ -684,12 +684,12 @@ public final class RedisUtil {
      * 指定key对应的集合中，分值在 start~end之间的降序，
      *  加上 withscores 的话可以将分值以及value都显示出来
      * @param key
-     * @param min
+     * @param end
      * @return
      */
-    public Set<Object> zrevrange(String key, long min, long max){
+    public Set<Object> zrevrange(String key, long start, long end){
         try {
-            return redisTemplate.opsForZSet().reverseRange(key,min,max);
+            return redisTemplate.opsForZSet().reverseRange(key,start,end);
         }catch (Exception e) {
             e.printStackTrace();
             return null;
@@ -702,7 +702,7 @@ public final class RedisUtil {
      * @param start
      * @return
      */
-    public Long zremrangebyrank (String key, long start, long end){
+    public Long zremrangebyrank(String key, long start, long end){
         try {
             return redisTemplate.opsForZSet().removeRange(key,start,end);
         }catch (Exception e) {
