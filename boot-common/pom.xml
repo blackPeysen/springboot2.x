@@ -7,6 +7,7 @@
         <groupId>com.org.peysen</groupId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
+
     <groupId>com.org.peysen</groupId>
     <artifactId>boot-common</artifactId>
     <version>0.0.1-SNAPSHOT</version>
