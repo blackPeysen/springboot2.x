@@ -6,6 +6,7 @@ import org.springframework.core.type.AnnotationMetadata;
 
 /**
  * @Description: helloworld ImportSelector
+ *               可以更具有弹性的选择返回想要的类型
  * @Author: peimm
  * @CreateDate: 2019/7/3 07:12
  * @UpdateRemark: The modified content
