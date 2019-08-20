@@ -1,4 +1,4 @@
-package com.org.peysen.bootcontext.listener;
+package com.org.peysen.bootcontext.context.listener;
 
 import org.springframework.context.ApplicationListener;
 import org.springframework.context.event.ContextRefreshedEvent;

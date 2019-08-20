@@ -5,5 +5,5 @@ com.org.peysen.bootcontext.context.HelloWorldApplicationContextInitializer
 
 # Application Listeners
 org.springframework.context.ApplicationListener=\
-com.org.peysen.bootcontext.listener.AfterHelloWorldApplicationListener,\
-com.org.peysen.bootcontext.listener.HelloWorldApplicationListener
+com.org.peysen.bootcontext.context.listener.AfterHelloWorldApplicationListener,\
+com.org.peysen.bootcontext.context.listener.HelloWorldApplicationListener
