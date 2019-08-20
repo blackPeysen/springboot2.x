@@ -7,7 +7,7 @@ import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.context.ConfigurableApplicationContext;
 
 /**
- * @Description: java类作用描述
+ * @Description: 基于配置方式实现 @Profile
  * @Author: peimm
  * @CreateDate: 2019/7/3 07:27
  * @UpdateRemark: The modified content

@@ -5,11 +5,10 @@ import org.springframework.context.annotation.ImportSelector;
 import org.springframework.core.type.AnnotationMetadata;
 
 /**
- * @Description: helloworld ImportSelector
- *               可以更具有弹性的选择返回想要的类型
+ * @Description: helloworld {@link ImportSelector} 实现
  * @Author: peimm
  * @CreateDate: 2019/7/3 07:12
- * @UpdateRemark: The modified content
+ * @UpdateRemark: 可以更具有弹性的选择返回想要的类型
  */
 
 public class HelloWorldImportSelector implements ImportSelector {

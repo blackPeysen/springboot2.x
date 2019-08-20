@@ -6,7 +6,7 @@ import org.springframework.context.annotation.Conditional;
 import java.lang.annotation.*;
 
 /**
- * @Description: java类作用描述
+ * @Description: java系统属性 条件判断
  * @Author: peimm
  * @CreateDate: 2019/7/3 07:46
  * @UpdateRemark: The modified content
