@@ -6,18 +6,18 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="boot-mvc" />
-        <module name="boot-context" />
         <module name="boot-common" />
+        <module name="boot-context" />
+        <module name="boot-mvc" />
         <module name="boot-rabbitmq" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="8">
       <module name="boot-common" target="8" />
-      <module name="boot-context" target="1.8" />
-      <module name="boot-mvc" target="1.8" />
-      <module name="boot-rabbitmq" target="1.8" />
-      <module name="springboot2.x" target="1.8" />
+      <module name="boot-context" target="1.7" />
+      <module name="boot-mvc" target="8" />
+      <module name="boot-rabbitmq" target="1.7" />
+      <module name="springboot2.x" target="1.7" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
