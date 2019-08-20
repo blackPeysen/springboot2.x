@@ -20,7 +20,7 @@ import java.util.Locale;
 
 
 //@EnableWebMvc
-@Configuration
+//@Configuration
 public class WebConfig implements WebMvcConfigurer {
 
 
