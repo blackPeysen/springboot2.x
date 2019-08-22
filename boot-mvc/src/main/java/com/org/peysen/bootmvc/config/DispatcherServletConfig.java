@@ -12,7 +12,7 @@ import org.springframework.web.servlet.i18n.SessionLocaleResolver;
 import java.util.Locale;
 
 /**
- * @Description: java类作用描述
+ * @Description: {@Link DispatcherServlet}配置类
  * @Author: peysen
  * @CreateDate: 2019/7/23 21:08
  * @UpdateRemark: The modified content
@@ -21,7 +21,7 @@ import java.util.Locale;
 
 //@EnableWebMvc
 //@Configuration
-public class WebConfig implements WebMvcConfigurer {
+public class DispatcherServletConfig implements WebMvcConfigurer {
 
 
     @Bean
