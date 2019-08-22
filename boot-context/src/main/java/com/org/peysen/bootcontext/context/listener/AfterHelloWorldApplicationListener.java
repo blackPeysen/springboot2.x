@@ -5,7 +5,7 @@ import org.springframework.context.event.ContextRefreshedEvent;
 import org.springframework.core.Ordered;
 
 /**
- * @Description: java类作用描述
+ * @Description: 自定义SpringApplication 上下文监听器：监听 ContextRefreshedEvent 事件
  * @Author: peimm
  * @CreateDate: 2019/7/7 08:24
  * @UpdateRemark: The modified content
@@ -14,7 +14,8 @@ public class AfterHelloWorldApplicationListener implements ApplicationListener<C
 
     @Override
     public void onApplicationEvent(ContextRefreshedEvent event) {
-        System.out.println("AfterHelloWorldApplicationListener:"+event.getTimestamp());
+        System.out.println("AfterHelloWorldApplicationListener:"+ event.getApplicationContext().getId()
+                + "timestamp:" +  event.getTimestamp());
     }
 
     @Override

@@ -6,7 +6,7 @@ import org.springframework.core.Ordered;
 import org.springframework.core.annotation.Order;
 
 /**
- * @Description: SpringApplication 上下文监听器
+ * @Description: 自定义SpringApplication 上下文监听器：监听 ContextRefreshedEvent 事件
  * @Author: peimm
  * @CreateDate: 2019/7/7 08:24
  * @UpdateRemark: The modified content
@@ -16,6 +16,7 @@ public class HelloWorldApplicationListener implements ApplicationListener<Contex
 
     @Override
     public void onApplicationEvent(ContextRefreshedEvent event) {
-        System.out.println("HelloWorldApplicationListener:"+event.getTimestamp());
+        System.out.println("HelloWorldApplicationListener:" + event.getApplicationContext().getId()
+                + "timestamp:" +  event.getTimestamp());
     }
 }
