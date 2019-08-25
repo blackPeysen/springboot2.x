@@ -1,4 +1,4 @@
-package com.org.peysen.bootmvc.converter;
+package com.org.peysen.bootmvc.customized.converter;
 
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.core.convert.converter.Converter;
@@ -9,7 +9,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
- * @Description: 将String 转换为 Date
+ * @Description: 自定义数据类型转换器：将String 转换为 Date
  * Created by mengmeng.Pei
  * 2019/8/8 9:25
  */

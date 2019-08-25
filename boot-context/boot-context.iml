@@ -2,7 +2,19 @@
 <module org.jetbrains.idea.maven.project.MavenProjectsManager.isMavenModule="true" type="JAVA_MODULE" version="4">
   <component name="FacetManager">
     <facet type="Spring" name="Spring">
-      <configuration />
+      <configuration>
+        <fileset id="fileset" name="Spring Application Context" removed="false">
+          <file>file://$MODULE_DIR$/src/main/resources/META-INF/spring/knights.xml</file>
+          <file>file://$MODULE_DIR$/src/main/resources/META-INF/spring/spring-context.xml</file>
+          <file>file://$MODULE_DIR$/src/main/resources/META-INF/spring/user-context.xml</file>
+          <file>file://$MODULE_DIR$/src/main/java/com/org/peysen/bootcontext/BootContextApplication.java</file>
+          <file>file://$MODULE_DIR$/src/main/java/com/org/peysen/bootcontext/bootstrap/spring/ClassPathXmlApplicationContextBootstarp.java</file>
+          <file>file://$MODULE_DIR$/src/main/java/com/org/peysen/bootcontext/bootstrap/spring/MyClassPathXmlApplicationContextBootstarp.java</file>
+          <file>file://$MODULE_DIR$/src/main/java/com/org/peysen/bootcontext/bootstrap/springBoot/SpringApplicationBootstrap.java</file>
+          <file>file://$MODULE_DIR$/src/main/java/com/org/peysen/bootcontext/bootstrap/springBoot/SpringXmlConfigPlaceholderBootstarp.java</file>
+          <file>file://$MODULE_DIR$/src/main/java/com/org/peysen/bootcontext/bootstrap/spring/XmlBeanFactoryBootstarp.java</file>
+        </fileset>
+      </configuration>
     </facet>
   </component>
   <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8">

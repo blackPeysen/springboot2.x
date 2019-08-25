@@ -1,5 +1,6 @@
 package com.org.peysen.bootmvc.controller;
 
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -13,19 +14,22 @@ import java.util.Map;
  * 2019/8/6 15:14
  */
 
-@RestController
+@Controller
 public class HelloController {
 
     @ModelAttribute
     private void test(@PathVariable("id") Integer id, Map<String,Object> map){
         if(id != null){
             map.put("id",2);
+        }else{
+            map.put("id",1);
         }
     }
 
     @RequestMapping("/helloWorld/{id}")
-    public void helloWorld(@ModelAttribute("id") Integer id){
+    public String helloWorld(@ModelAttribute("id") Integer id){
         System.out.println("helloWorld:" + id);
+        return "index";
     }
 
 }

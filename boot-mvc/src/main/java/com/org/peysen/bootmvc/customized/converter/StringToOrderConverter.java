@@ -1,4 +1,4 @@
-package com.org.peysen.bootmvc.converter;
+package com.org.peysen.bootmvc.customized.converter;
 
 import com.alibaba.fastjson.JSON;
 import com.org.peysen.bootmvc.entity.OrderDetail;
@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 import java.util.List;
 
 /**
- * @Description: java类作用描述
+ * @Description: 自定义数据类型转换器：String--》List<OrderDetail>
  * Created by mengmeng.Pei
  * 2019/8/8 9:33
  */
