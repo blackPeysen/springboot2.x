@@ -6,6 +6,8 @@
       <module fileurl="file://$PROJECT_DIR$/boot-context/boot-context.iml" filepath="$PROJECT_DIR$/boot-context/boot-context.iml" />
       <module fileurl="file://$PROJECT_DIR$/boot-mvc/boot-mvc.iml" filepath="$PROJECT_DIR$/boot-mvc/boot-mvc.iml" />
       <module fileurl="file://$PROJECT_DIR$/boot-rabbitmq/boot-rabbitmq.iml" filepath="$PROJECT_DIR$/boot-rabbitmq/boot-rabbitmq.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bootAyncmvc/bootAyncmvc.iml" filepath="$PROJECT_DIR$/bootAyncmvc/bootAyncmvc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/boot-asynMvc/bootasynMvc.iml" filepath="$PROJECT_DIR$/boot-asynMvc/bootasynMvc.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/springboot2.x.iml" filepath="$PROJECT_DIR$/.idea/springboot2.x.iml" />
     </modules>
   </component>

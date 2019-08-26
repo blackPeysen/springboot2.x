@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="bootasynMvc:war">
+    <output-path>$PROJECT_DIR$/boot-asynMvc/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>bootasynMvc</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="boot-asynMvc.war">
+      <element id="artifact" artifact-name="bootasynMvc:war exploded" />
+    </root>
+  </artifact>
+</component>
