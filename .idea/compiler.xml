@@ -11,6 +11,7 @@
         <module name="boot-data" />
         <module name="boot-mvc" />
         <module name="boot-rabbitmq" />
+        <module name="boot-reactor" />
         <module name="bootasynMvc" />
       </profile>
     </annotationProcessing>
@@ -21,6 +22,7 @@
       <module name="boot-data" target="1.7" />
       <module name="boot-mvc" target="8" />
       <module name="boot-rabbitmq" target="1.7" />
+      <module name="boot-reactor" target="8" />
       <module name="bootasynMvc" target="1.7" />
       <module name="bootAyncmvc" target="1.8" />
       <module name="springboot2.x" target="1.7" />
@@ -34,6 +36,7 @@
       <module name="boot-data" options="-parameters" />
       <module name="boot-mvc" options="-parameters" />
       <module name="boot-rabbitmq" options="-parameters" />
+      <module name="boot-reactor" options="-parameters" />
       <module name="bootAyncmvc" options="-parameters" />
       <module name="bootasynMvc" options="-parameters" />
     </option>
