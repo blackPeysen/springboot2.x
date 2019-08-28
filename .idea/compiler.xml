@@ -6,23 +6,24 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="bootasynMvc" />
-        <module name="bootAyncmvc" />
-        <module name="boot-rabbitmq" />
-        <module name="boot-mvc" />
-        <module name="boot-context" />
         <module name="boot-common" />
+        <module name="boot-context" />
+        <module name="boot-data" />
+        <module name="boot-mvc" />
+        <module name="boot-rabbitmq" />
+        <module name="bootasynMvc" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="8">
       <module name="boot-asynMvc" target="1.7" />
       <module name="boot-common" target="8" />
-      <module name="boot-context" target="1.8" />
+      <module name="boot-context" target="1.7" />
+      <module name="boot-data" target="1.7" />
       <module name="boot-mvc" target="8" />
-      <module name="boot-rabbitmq" target="1.8" />
+      <module name="boot-rabbitmq" target="1.7" />
       <module name="bootasynMvc" target="1.7" />
       <module name="bootAyncmvc" target="1.8" />
-      <module name="springboot2.x" target="1.8" />
+      <module name="springboot2.x" target="1.7" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
@@ -30,6 +31,7 @@
       <module name="boot-asynMvc" options="-parameters" />
       <module name="boot-common" options="-parameters" />
       <module name="boot-context" options="-parameters" />
+      <module name="boot-data" options="-parameters" />
       <module name="boot-mvc" options="-parameters" />
       <module name="boot-rabbitmq" options="-parameters" />
       <module name="bootAyncmvc" options="-parameters" />

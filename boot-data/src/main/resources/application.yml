@@ -1,0 +1,43 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /bootData
+
+spring:
+  datasource:
+    username: envision
+    password: envision
+    # 2.0 需设置时区参数serverTimezone=GMT
+    url: jdbc:mysql://localhost:3306/test?characterEncoding=utf8&useSSL=true&createDatabaseIfNotExist=true&serverTimezone=GMT
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+    #  druid数据源其他配置
+    initialSize: 5
+    minIdle: 5
+    maxActive: 20
+    maxWait: 60000
+    timeBetweenEvictionRunsMillis: 60000
+    minEvictableIdleTimeMillis: 300000
+    validationQuery: SELECT 1 FROM DUAL
+    testWhileIdle: true
+    testOnBorrow: false
+    testOnReturn: false
+    poolPreparedStatements: true
+    #   配置监控统计拦截的filters，去掉后监控界面sql无法统计，'wall'用于防火墙
+    filters: stat,wall
+    maxPoolPreparedStatementPerConnectionSize: 20
+    useGlobalDataSourceStat: true
+    connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=500
+
+    # 2.0需设置该参数,表示是否在启动时加载sql脚本
+    initialization-mode: always
+    # 默认加载classpath:schema.sql,也可以通过该参数指定sql脚本,用于建表语句
+    schema:
+      - classpath:schema.sql
+    # 默认加载classpath:data.sql, 也可以通过该参数指定sql脚本,用于插入语句
+    data:
+      - classpath:data.sql
+
+#Mybatis 配置参照MybatisProperties
+
+#Jpa 配置参照JpaProperties
