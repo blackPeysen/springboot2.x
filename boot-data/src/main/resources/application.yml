@@ -41,3 +41,7 @@ spring:
 #Mybatis 配置参照MybatisProperties
 
 #Jpa 配置参照JpaProperties
+
+#Springboot默认配置读取
+user:
+  id: 0

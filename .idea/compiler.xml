@@ -19,7 +19,7 @@
       <module name="boot-asynMvc" target="1.7" />
       <module name="boot-common" target="8" />
       <module name="boot-context" target="1.7" />
-      <module name="boot-data" target="1.7" />
+      <module name="boot-data" target="8" />
       <module name="boot-mvc" target="8" />
       <module name="boot-rabbitmq" target="1.7" />
       <module name="boot-reactor" target="8" />
