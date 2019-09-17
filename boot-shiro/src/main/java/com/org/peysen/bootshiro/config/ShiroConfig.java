@@ -45,8 +45,6 @@ public class ShiroConfig {
         defaultSecurityManager.setRealm(customRealm());
         //设置sessionManager管理器
         defaultSecurityManager.setSessionManager(sessionManager());
-        //设置cacheManager缓存管理器
-        defaultSecurityManager.setCacheManager(cacheManager());
         //设置rememberMeManager缓存管理器
         defaultSecurityManager.setRememberMeManager(cookieRememberMeManager());
 
@@ -65,6 +63,7 @@ public class ShiroConfig {
         shiroFilterFactoryBean.setSecurityManager(securityManager);
         shiroFilterFactoryBean.setLoginUrl("/login");
         shiroFilterFactoryBean.setUnauthorizedUrl("/notRole");
+
         Map<String, String> filterChainDefinitionMap = new LinkedHashMap<>();
         // <!-- authc:所有url都必须认证通过才可以访问; anon:所有url都都可以匿名访问-->
         filterChainDefinitionMap.put("/webjars/**", "anon");
@@ -72,18 +71,14 @@ public class ShiroConfig {
         filterChainDefinitionMap.put("/", "anon");
         filterChainDefinitionMap.put("/front/**", "anon");
         filterChainDefinitionMap.put("/api/**", "anon");
-
         filterChainDefinitionMap.put("/admin/**", "authc");
         filterChainDefinitionMap.put("/user/**", "authc");
-
         //测试角色
         filterChainDefinitionMap.put("/testRole", "roles[admin]");
         filterChainDefinitionMap.put("/testRole1", "rolesOrFilter[admin,admin1]");
-
         //测试角色
         filterChainDefinitionMap.put("/testPerm", "perms[user:delete]");
         filterChainDefinitionMap.put("/testPerm", "perms[user:delete,user:update]");
-
         //主要这行代码必须放在所有权限设置的最后，不然会导致所有 url 都被拦截 剩余的都需要认证
         filterChainDefinitionMap.put("/**", "authc");
         shiroFilterFactoryBean.setFilterChainDefinitionMap(filterChainDefinitionMap);
@@ -126,6 +121,8 @@ public class ShiroConfig {
         CustomRealm customRealm = new CustomRealm();
         // 告诉realm,使用credentialsMatcher加密算法类来验证密文
         customRealm.setCredentialsMatcher(hashedCredentialsMatcher());
+        //设置cacheManager缓存管理器
+        customRealm.setCacheManager(cacheManager());
         //不使用缓存数据
         customRealm.setCachingEnabled(false);
         return customRealm;
