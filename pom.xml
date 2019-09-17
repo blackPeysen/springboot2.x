@@ -14,7 +14,8 @@
         <module>boot-rabbitmq</module>
         <module>boot-mvc</module>
         <module>boot-data</module>
-        <module>boot-reactor</module>
+        <module>boot-webflux</module>
+        <module>boot-shiro</module>
     </modules>
 
     <groupId>com.org.peysen</groupId>
