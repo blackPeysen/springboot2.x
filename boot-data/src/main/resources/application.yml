@@ -8,7 +8,7 @@ spring:
     username: envision
     password: envision
     # 2.0 需设置时区参数serverTimezone=GMT
-    url: jdbc:mysql://localhost:3306/test?characterEncoding=utf8&useSSL=true&createDatabaseIfNotExist=true&serverTimezone=GMT
+    url: jdbc:mysql://localhost:3306/test?characterEncoding=utf8&useSSL=true&createDatabaseIfNotExist=true&serverTimezone=GMT%2B8
     driver-class-name: com.mysql.cj.jdbc.Driver
     type: com.alibaba.druid.pool.DruidDataSource
     #  druid数据源其他配置
@@ -38,7 +38,37 @@ spring:
     data:
       - classpath:data.sql
 
-#Mybatis 配置参照MybatisProperties
+## Mybatis-plus 配置
+mybatis-plus:
+  # 如果是放在src/main/java目录下 classpath:/com/yourpackage/*/mappers/*Mapper.xml
+  # 如果是放在resource目录 classpath:/mappers/*Mapper.xml
+  mapper-locations: classpath:mybatis/mappers/*Mapper.xml
+  #实体扫描，多个package用逗号或者分号分隔
+  typeAliasesPackage: com.org.peysen.bootdata.entity
+  global-config:
+    #主键类型  0:"数据库ID自增", 1:"用户输入ID",2:"全局唯一ID (数字类型唯一ID)", 3:"全局唯一ID UUID";
+    id-type: 0
+    #字段策略 0:"忽略判断",1:"非 NULL 判断"),2:"非空判断"
+    field-strategy: 1
+    #驼峰下划线转换
+    db-column-underline: true
+    #刷新mapper 调试神器
+    #refresh-mappers: true
+    #数据库大写下划线转换
+    #capital-mode: true
+    # Sequence序列接口实现类配置
+    #key-generator: com.baomidou.mybatisplus.incrementer.OracleKeyGenerator
+    #逻辑删除配置（下面3个配置）
+    #logic-delete-value: 1
+    #logic-not-delete-value: 0
+    #sql-injector: com.baomidou.mybatisplus.mappers.LogicSqlInjector
+    #自定义填充策略接口实现
+    #meta-object-handler: com.baomidou.springboot.MyMetaObjectHandler
+  configuration:
+    map-underscore-to-camel-case: true
+    cache-enabled: false
+    #配置JdbcTypeForNull
+    jdbc-type-for-null: 'null'
 
 #Jpa 配置参照JpaProperties
 
