@@ -1,5 +1,6 @@
 package com.org.peysen.bootdata.entity;
 
+import com.baomidou.mybatisplus.annotation.TableLogic;
 import lombok.Data;
 
 /**
@@ -14,4 +15,8 @@ public class User {
     private Integer id;
 
     private String name;
+
+    //逻辑删除标识（0：未删除，1：已删除）
+    @TableLogic
+    private Integer deleted;
 }
