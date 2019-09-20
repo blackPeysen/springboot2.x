@@ -16,6 +16,7 @@
         <module>boot-data</module>
         <module>boot-webflux</module>
         <module>boot-shiro</module>
+        <module>boot-wechat</module>
     </modules>
 
     <groupId>com.org.peysen</groupId>

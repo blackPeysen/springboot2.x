@@ -41,7 +41,7 @@ public class QueryData<T> {
 //        this.setTotalCount(page.getTotal());
 //    }
 //
-//    public <E> QueryData(IPage<E> page, Function<E, T> mapper) {
+//    public <E> QueryData(IPage<E> page, Function<E, T> mappers) {
 //
 //        this.setPageNo(page.getCurrent());
 //        this.setPageSize(page.getSize());
@@ -50,7 +50,7 @@ public class QueryData<T> {
 //        if (CollUtil.isEmpty(page.getRecords())) {
 //            this.setRecords(Collections.emptyList());
 //        } else {
-//            this.setRecords(page.getRecords().stream().map(mapper).collect(Collectors.toList()));
+//            this.setRecords(page.getRecords().stream().map(mappers).collect(Collectors.toList()));
 //        }
 //
 //    }

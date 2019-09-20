@@ -36,7 +36,7 @@ spring:
 
 mybatis:
   typeAliasesPackage: com.org.peysen.bootrabbitmq.entity
-  mapper-locations: classpath:mapper/*Mapper.xml
+  mapper-locations: classpath:mappers/*Mapper.xml
 
 logging:
   level:

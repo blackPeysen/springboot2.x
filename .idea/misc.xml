@@ -13,6 +13,8 @@
         <option value="$PROJECT_DIR$/bootAyncmvc/pom.xml" />
         <option value="$PROJECT_DIR$/boot-data/pom.xml" />
         <option value="$PROJECT_DIR$/boot-reactor/pom.xml" />
+        <option value="$PROJECT_DIR$/boot-shiro/pom.xml" />
+        <option value="$PROJECT_DIR$/boot-wechat/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
