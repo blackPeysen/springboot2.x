@@ -34,7 +34,7 @@ import java.util.Map;
  */
 
 @Configuration
-@MapperScan(basePackages="com.org.peysen.bootrabbitmq.mapper",sqlSessionFactoryRef="sqlSessionFactory")
+@MapperScan(basePackages="com.org.peysen.bootrabbitmq.mappers",sqlSessionFactoryRef="sqlSessionFactory")
 @EnableTransactionManagement(proxyTargetClass = true)
 public class DruidSourceConfiguration {
     private static final Logger log = LoggerFactory.getLogger(DruidSourceConfiguration.class);
@@ -88,7 +88,7 @@ public class DruidSourceConfiguration {
         //sqlSessionFactoryBean.setConfigLocation(new ClassPathResource(myBatisConfigPath));
 
         // 设置mapper对应的XML 文件的路径
-        sqlSessionFactoryBean.setMapperLocations(resolver.getResources("classpath:mapper/*Mapper.xml"));
+        sqlSessionFactoryBean.setMapperLocations(resolver.getResources("classpath:mappers/*Mapper.xml"));
 
         // 设置数据源
         sqlSessionFactoryBean.setDataSource(dataSource);

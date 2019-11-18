@@ -1,0 +1,8 @@
+spring:
+  mail:
+    host: smtp.qq.com # QQ邮箱smtp主机
+    port: 587
+    username: 1363039590@qq.com
+    password: mdnajvcfcpmajcij
+    protocol: smtp
+    default-encoding: UTF-8
