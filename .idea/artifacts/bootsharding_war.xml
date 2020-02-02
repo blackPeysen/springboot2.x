@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="bootsharding:war">
+    <output-path>$PROJECT_DIR$/boot-sharding/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>bootsharding</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="boot-sharding.war">
+      <element id="artifact" artifact-name="bootsharding:war exploded" />
+    </root>
+  </artifact>
+</component>

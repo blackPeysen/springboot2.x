@@ -2,6 +2,8 @@
 <project version="4">
   <component name="FrameworkDetectionExcludesConfiguration">
     <file type="web" url="file://$PROJECT_DIR$/boot-asynMvc" />
+    <file type="web" url="file://$PROJECT_DIR$/boot-jdk8" />
+    <file type="web" url="file://$PROJECT_DIR$/boot-sharding" />
   </component>
   <component name="JavaScriptSettings">
     <option name="languageLevel" value="ES6" />

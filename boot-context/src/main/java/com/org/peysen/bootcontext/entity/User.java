@@ -9,6 +9,12 @@ import org.springframework.beans.factory.annotation.Value;
  * @UpdateRemark: The modified content
  */
 public class User {
+    public static void main(String[] args) throws InterruptedException {
+        while(true){
+            Thread.sleep(1000);
+            System.out.println("123");
+        }
+    }
 
     private Long id;
 
