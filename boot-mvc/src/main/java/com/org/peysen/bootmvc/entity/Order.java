@@ -25,6 +25,16 @@ public class Order {
     private Date bookingTime;
 
     /**
+     * 订单来源
+     */
+    private String source;
+
+    /**
+     * 支付方式
+     */
+    private String payMethod;
+
+    /**
      * 订单详情列表，controller封装的order对象中如果没有自定义的类型转换，默认情况下无法正确的封装
      */
     private List<OrderDetail> orderDetailList;
@@ -45,28 +55,35 @@ public class Order {
         this.orderNo = orderNo;
     }
 
-    public Date getBookingTime() {
+    public java.util.Date getBookingTime() {
         return bookingTime;
     }
 
-    public void setBookingTime(Date bookingTime) {
+    public void setBookingTime(java.util.Date bookingTime) {
         this.bookingTime = bookingTime;
     }
 
-    public List<OrderDetail> getOrderDetailList() {
+    public String getSource() {
+        return source;
+    }
+
+    public void setSource(String source) {
+        this.source = source;
+    }
+
+    public String getPayMethod() {
+        return payMethod;
+    }
+
+    public void setPayMethod(String payMethod) {
+        this.payMethod = payMethod;
+    }
+
+    public java.util.List<OrderDetail> getOrderDetailList() {
         return orderDetailList;
     }
 
-    public void setOrderDetailList(List<OrderDetail> orderDetailList) {
+    public void setOrderDetailList(java.util.List<OrderDetail> orderDetailList) {
         this.orderDetailList = orderDetailList;
-    }
-
-    @Override
-    public String toString() {
-        return "Order{" +
-                "orderId=" + orderId +
-                ", orderNo='" + orderNo + '\'' +
-                ", bookingTime=" + bookingTime +
-                '}';
     }
 }

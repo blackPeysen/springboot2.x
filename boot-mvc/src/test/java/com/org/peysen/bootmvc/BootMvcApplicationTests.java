@@ -11,6 +11,7 @@ public class BootMvcApplicationTests {
 
     @Test
     public void contextLoads() {
+        System.out.println("contextLoads");
     }
 
 }
