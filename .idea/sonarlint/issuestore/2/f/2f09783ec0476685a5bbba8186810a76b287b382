@@ -1,23 +1,23 @@
 
-csquid:S00112e"FDefine and throw a dedicated exception instead of using a generic one.(¨¹¥Ôýÿÿÿÿ
+^squid:S00112_"FDefine and throw a dedicated exception instead of using a generic one.(„±‡Š
 _squid:S2276y"CReplace the call to "Thread.sleep(...)" with a call to "wait(...)".(»ãßºøÿÿÿÿ
-O
-squid:S106w"9Replace this use of System.out or System.err by a logger.(ò€³­
-O
-squid:S106F"9Replace this use of System.out or System.err by a logger.(¥ÏÙ½
 P
 squid:S106€"9Replace this use of System.out or System.err by a logger.(Â«Áå
-P
-squid:S106‚"9Replace this use of System.out or System.err by a logger.(¼¬ƒÖ
-T
-squid:S106D"9Replace this use of System.out or System.err by a logger.(ùÅˆéÿÿÿÿÿ
-jsquid:S00101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(óÎ °ùÿÿÿÿ
 O
 squid:S1061"9Replace this use of System.out or System.err by a logger.(äŸ­Ú
 N
 squid:S106h"9Replace this use of System.out or System.err by a logger.(Âë²O
 ]squid:S2142z"FEither re-interrupt this method or rethrow the "InterruptedException".(ä ¹€
-^squid:S00112_"FDefine and throw a dedicated exception instead of using a generic one.(„±‡Š
+P
+squid:S106‚"9Replace this use of System.out or System.err by a logger.(¼¬ƒÖ
+jsquid:S00101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(óÎ °ùÿÿÿÿ
+csquid:S00112e"FDefine and throw a dedicated exception instead of using a generic one.(¨¹¥Ôýÿÿÿÿ
+T
+squid:S106D"9Replace this use of System.out or System.err by a logger.(ùÅˆéÿÿÿÿÿ
+O
+squid:S106F"9Replace this use of System.out or System.err by a logger.(¥ÏÙ½
 ?squid:S1148{"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ
 T
 squid:S106B"9Replace this use of System.out or System.err by a logger.(Û›­èüÿÿÿÿ
+O
+squid:S106w"9Replace this use of System.out or System.err by a logger.(ò€³­

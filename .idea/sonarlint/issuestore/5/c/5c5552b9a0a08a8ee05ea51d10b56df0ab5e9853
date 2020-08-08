@@ -1,0 +1,15 @@
+
+Œ"squid:ClassVariableVisibilityCheck"WMake threadLocal a static final constant or non-public and provide accessors if needed.(¦¨İ‚8ØÛ„êŠ.
+Jsquid:S1444",Make this "public static random" field final(øÍÄ8¸íêèŠ.
+Xsquid:S1444"5Make this "public static executorService" field final(íÂÙƒûÿÿÿÿ8Ö¡éèŠ.
+‡"squid:ClassVariableVisibilityCheck"RMake random a static final constant or non-public and provide accessors if needed.(øÍÄ8¸íêèŠ.
+V
+squid:S106F"9Replace this use of System.out or System.err by a logger.(ÑÒ‰ò8¯Î•éŠ.
+[
+squid:S106O"9Replace this use of System.out or System.err by a logger.(¯ÇÁ¤øÿÿÿÿ8ñ§˜éŠ.
+dsquid:UselessImportCheck"9Remove this unused import 'javax.script.ScriptException'.(ı³˜Ù8Ôö‘éŠ.
+Osquid:S1444"1Make this "public static threadLocal" field final(¦¨İ‚8ØÛ„êŠ.
+dsquid:S4065"FReplace this anonymous class with a call to "ThreadLocal.withInitial".(¦¨İ‚8ØÛ„êŠ.
+[
+squid:S1061"9Replace this use of System.out or System.err by a logger.(›å¯Èúÿÿÿÿ8äÒ‘éŠ.
+•"squid:ClassVariableVisibilityCheck"[Make executorService a static final constant or non-public and provide accessors if needed.(íÂÙƒûÿÿÿÿ8Ö¡éèŠ.

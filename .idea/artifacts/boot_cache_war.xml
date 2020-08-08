@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="boot-cache:war">
+    <output-path>$PROJECT_DIR$/boot-cache/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>boot-cache</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="boot-cache.war">
+      <element id="artifact" artifact-name="boot-cache:war exploded" />
+    </root>
+  </artifact>
+</component>

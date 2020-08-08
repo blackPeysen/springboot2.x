@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/boot-aop" />
     <file type="web" url="file://$PROJECT_DIR$/boot-asynMvc" />
+    <file type="web" url="file://$PROJECT_DIR$/boot-cache" />
     <file type="web" url="file://$PROJECT_DIR$/boot-jdk8" />
     <file type="web" url="file://$PROJECT_DIR$/boot-sharding" />
   </component>
@@ -13,15 +15,16 @@
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/bootAyncmvc/pom.xml" />
-        <option value="$PROJECT_DIR$/boot-data/pom.xml" />
         <option value="$PROJECT_DIR$/boot-reactor/pom.xml" />
         <option value="$PROJECT_DIR$/boot-shiro/pom.xml" />
         <option value="$PROJECT_DIR$/boot-wechat/pom.xml" />
+        <option value="$PROJECT_DIR$/boot-mybatis/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
       <set>
         <option value="$PROJECT_DIR$/boot-asynMvc/pom.xml" />
+        <option value="$PROJECT_DIR$/boot-cache/pom.xml" />
       </set>
     </option>
   </component>

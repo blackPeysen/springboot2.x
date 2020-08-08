@@ -1,0 +1,77 @@
+
+1squid:S2178Ì"Correct this "&" to "&&".(ô ¼¹
+;squid:S1148Ò"#Use a logger to log this exception.(Ç’Çê
+Qsquid:S2130ø"9Use "Integer.parseInt" for this string-to-int conversion.(œê¶
+csquid:CommentedOutCodeLine¥"<This block of commented-out lines of code should be removed.(†€éˆ
+Xsquid:CallToDeprecatedMethodø"/Remove this use of "Integer"; it is deprecated.(œê¶
+ysquid:S1488ø"\Immediately return this expression instead of assigning it to the temporary variable "time".(Ş¬óúÿÿÿÿ
+@squid:S1148Ó"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ
+osquid:ModifiersOrderCheck0"EReorder the modifiers to comply with the Java Language Specification.(äá³İÿÿÿÿÿ
+ysquid:S1488’"\Immediately return this expression instead of assigning it to the temporary variable "year".(Á†êûÿÿÿÿ
+Gsquid:S00108Î")Either remove or fill this block of code.(âÃƒŠıÿÿÿÿ
+psquid:S1192Û"XUse already-defined constant 'SHORT_FORMAT_MONTH' instead of duplicating its value here.(êÇóô
+Vsquid:S2130ê"9Use "Integer.parseInt" for this string-to-int conversion.(ÌæÎ®ÿÿÿÿÿ
+osquid:ModifiersOrderCheck."EReorder the modifiers to comply with the Java Language Specification.(êò³üÿÿÿÿ
+esquid:S5361€"HReplace this call to "replaceAll()" by a call to the "replace()" method.(¾¼˜õüÿÿÿÿ
+fsquid:S2259Í"IA "NullPointerException" could be thrown; "formatDate()" can return null.(Í—ó¤ÿÿÿÿÿ
+^squid:S2259ö"FA "NullPointerException" could be thrown; "calendar" is nullable here.(»äôœ
+9squid:S2129ÿ"!Remove this "Integer" constructor(ŒéÑŠ
+osquid:ModifiersOrderCheck*"EReorder the modifiers to comply with the Java Language Specification.(ôá¦‰şÿÿÿÿ
+;squid:S1148â"#Use a logger to log this exception.(Ç’Çê
+Gsquid:S00108ä")Either remove or fill this block of code.(âÃƒŠıÿÿÿÿ
+|squid:S1149"_Replace the synchronized class "StringBuffer" by an unsynchronized one such as "StringBuilder".(ú‰•òıÿÿÿÿ
+osquid:ModifiersOrderCheck4"EReorder the modifiers to comply with the Java Language Specification.(–Ñ˜şÿÿÿÿ
+9squid:S2129ü"!Remove this "Integer" constructor(ÅÌª
+jsquid:ModifiersOrderCheck3"EReorder the modifiers to comply with the Java Language Specification.(¨É©
+O
+squid:S106}"9Replace this use of System.out or System.err by a logger.(çÎ¶É
+~squid:S1488¹"aImmediately return this expression instead of assigning it to the temporary variable "dayBefore".(Ÿ–ÀÃúÿÿÿÿ
+Xsquid:CallToDeprecatedMethodü"/Remove this use of "Integer"; it is deprecated.(ÅÌª
+]squid:CallToDeprecatedMethod†"/Remove this use of "Integer"; it is deprecated.(£­ç¢ıÿÿÿÿ
+isquid:ModifiersOrderCheck9"EReorder the modifiers to comply with the Java Language Specification.(ÀêÊs
+osquid:ModifiersOrderCheck/"EReorder the modifiers to comply with the Java Language Specification.(Å®Ô„úÿÿÿÿ
+Xsquid:CallToDeprecatedMethodû"/Remove this use of "Integer"; it is deprecated.(Œ®’¨
+esquid:S5361‘"HReplace this call to "replaceAll()" by a call to the "replace()" method.(¾¼˜õüÿÿÿÿ
+Xsquid:CallToDeprecatedMethod„"/Remove this use of "Integer"; it is deprecated.(œê¶
+Vsquid:S2130·"9Use "Integer.parseInt" for this string-to-int conversion.(Îü™¦üÿÿÿÿ
+ssquid:S1488–"[Immediately return this expression instead of assigning it to the temporary variable "str".(ÿ³æ±
+jsquid:ModifiersOrderCheck+"EReorder the modifiers to comply with the Java Language Specification.(¿Óá
+Vsquid:S2130¸"9Use "Integer.parseInt" for this string-to-int conversion.(²éäÄûÿÿÿÿ
+1squid:S2178ƒ"Correct this "|" to "||".(ô ¼¹
+7squid:S2131ü"Use "Integer.toString" instead.(ÅÌª
+Xsquid:CallToDeprecatedMethodÿ"/Remove this use of "Integer"; it is deprecated.(ŒéÑŠ
+squid:S1845Ù"wRename method "formatDateShort" to prevent any misunderstanding/clash with method "formatDateSHORT" defined on line 71.(Œ¸ğ…
+ysquid:S1488ˆ"\Immediately return this expression instead of assigning it to the temporary variable "time".(âœòÛùÿÿÿÿ
+Vsquid:S2130ë"9Use "Integer.parseInt" for this string-to-int conversion.(Îü™¦üÿÿÿÿ
+jsquid:ModifiersOrderCheck8"EReorder the modifiers to comply with the Java Language Specification.(õÙ¡‰
+esquid:S5361ğ"HReplace this call to "replaceAll()" by a call to the "replace()" method.(¾¼˜õüÿÿÿÿ
+<squid:S2131†"Use "Integer.toString" instead.(£­ç¢ıÿÿÿÿ
+wsquid:S1488¢"_Immediately return this expression instead of assigning it to the temporary variable "dResult".(Ò¼¼
+bsquid:CommentedOutCodeLiney"<This block of commented-out lines of code should be removed.(Şó€Ö
+osquid:ModifiersOrderCheck5"EReorder the modifiers to comply with the Java Language Specification.(İ“¾«úÿÿÿÿ
+–squid:S1158ü"~Call the static method Integer.toString(...) instead of instantiating a temporary object to perform this to string conversion.(ÅÌª
+Qsquid:S3400©"9Remove this method and declare a constant for this value.(€©Ğ
+1squid:S2178ƒ"Correct this "&" to "&&".(ô ¼¹
+>squid:S2129†"!Remove this "Integer" constructor(£­ç¢ıÿÿÿÿ
+7squid:S2131ÿ"Use "Integer.toString" instead.(ŒéÑŠ
+Vsquid:S2130¶"9Use "Integer.parseInt" for this string-to-int conversion.(ÌæÎ®ÿÿÿÿÿ
+Qsquid:S2130„"9Use "Integer.parseInt" for this string-to-int conversion.(œê¶
+Gsquid:S00108Ù")Either remove or fill this block of code.(âÃƒŠıÿÿÿÿ
+jsquid:ModifiersOrderCheck1"EReorder the modifiers to comply with the Java Language Specification.(üÀ“›
+Gsquid:S00108Ã")Either remove or fill this block of code.(âÃƒŠıÿÿÿÿ
+^squid:S2259†"FA "NullPointerException" could be thrown; "calendar" is nullable here.(»äôœ
+ysquid:S1488™"\Immediately return this expression instead of assigning it to the temporary variable "time".(÷åĞËúÿÿÿÿ
+xsquid:S1192ø"[Use already-defined constant 'SHORT_EN_FORMAT_MONTH' instead of duplicating its value here.(Ş¬óúÿÿÿÿ
+^squid:S2259—"FA "NullPointerException" could be thrown; "calendar" is nullable here.(»äôœ
+|squid:S1149’"_Replace the synchronized class "StringBuffer" by an unsynchronized one such as "StringBuilder".(ú‰•òıÿÿÿÿ
+jsquid:ModifiersOrderCheck2"EReorder the modifiers to comply with the Java Language Specification.(å“ÉÇ
+jsquid:ModifiersOrderCheck7"EReorder the modifiers to comply with the Java Language Specification.(ƒğáº
+1squid:S2178Ì"Correct this "|" to "||".(ô ¼¹
+@squid:S1148³"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ
+osquid:ModifiersOrderCheck6"EReorder the modifiers to comply with the Java Language Specification.(Ò„ÿ üÿÿÿÿ
+|squid:S1149ñ"_Replace the synchronized class "StringBuffer" by an unsynchronized one such as "StringBuilder".(ú‰•òıÿÿÿÿ
+›squid:S1158†"~Call the static method Integer.toString(...) instead of instantiating a temporary object to perform this to string conversion.(£­ç¢ıÿÿÿÿ
+osquid:ModifiersOrderCheck,"EReorder the modifiers to comply with the Java Language Specification.(şò¥¬ùÿÿÿÿ
+rsquid:S1192İ"UUse already-defined constant 'SHORT_EN_FORMAT' instead of duplicating its value here.(­Äßºşÿÿÿÿ
+osquid:ModifiersOrderCheck-"EReorder the modifiers to comply with the Java Language Specification.(‹ºæ‡úÿÿÿÿ
+–squid:S1158ÿ"~Call the static method Integer.toString(...) instead of instantiating a temporary object to perform this to string conversion.(ŒéÑŠ

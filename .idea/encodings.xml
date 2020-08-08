@@ -2,6 +2,7 @@
 <project version="4">
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/boot-aop" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/boot-aync-mvc" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/boot-aync-mvc/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/boot-aync-mvc/src/main/resources" charset="UTF-8" />
@@ -19,6 +20,7 @@
     <file url="file://$PROJECT_DIR$/boot-mvc" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/boot-mvc/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/boot-mvc/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/boot-mybatis" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/boot-rabbitmq" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/boot-rabbitmq/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/boot-sharding" charset="UTF-8" />
@@ -26,7 +28,5 @@
     <file url="file://$PROJECT_DIR$/boot-shiro/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/boot-webflux" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/boot-webflux/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/boot-wechat" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/boot-wechat/src/main/java" charset="UTF-8" />
   </component>
 </project>

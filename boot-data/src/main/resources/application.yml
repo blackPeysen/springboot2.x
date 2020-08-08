@@ -5,8 +5,8 @@ server:
 
 spring:
   datasource:
-    username: envision
-    password: envision
+    username: root
+    password: root
     # 2.0 需设置时区参数serverTimezone=GMT
     url: jdbc:mysql://localhost:3306/test?characterEncoding=utf8&useSSL=true&createDatabaseIfNotExist=true&serverTimezone=GMT%2B8
     driver-class-name: com.mysql.cj.jdbc.Driver

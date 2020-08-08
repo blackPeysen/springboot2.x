@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component;
  * @Description: java类作用描述
  * @Author: peysen
  * @CreateDate: 2019/7/9 07:42
- * @UpdateRemark: The modified content
+ * @UpdateRemark: 直连发布者
  */
 @Component
 public class DirectSender implements Sender<Order>{

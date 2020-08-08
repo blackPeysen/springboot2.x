@@ -1,0 +1,6 @@
+
+^squid:S00112n"FDefine and throw a dedicated exception instead of using a generic one.(„ƒ®ş
+psquid:S22930"YReplace the type specification in this constructor call with the diamond operator ("<>").(Îä™š
+%squid:RedundantThrowsDeclarationCheckn"lRemove the declaration of thrown exception 'java.lang.Exception', as it cannot be thrown from method's body.(„ƒ®ş
+gsquid:CommentedOutCodeLineV"<This block of commented-out lines of code should be removed.(‘š„Îùÿÿÿÿ
+gsquid:CommentedOutCodeLineX"<This block of commented-out lines of code should be removed.(Òõ—Óüÿÿÿÿ

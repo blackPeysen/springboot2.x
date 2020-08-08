@@ -1,0 +1,5 @@
+
+Isquid:S1481"-Remove this unused "instance" local variable.(σθ©μϋÿÿÿÿ
+gsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(΄αεύÿÿÿÿ
+wsquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ωΒάόÿÿÿÿ
+Xsquid:S1854"<Remove this useless assignment to local variable "instance".(σθ©μϋÿÿÿÿ

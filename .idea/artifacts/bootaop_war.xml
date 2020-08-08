@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="bootaop:war">
+    <output-path>$PROJECT_DIR$/boot-aop/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>bootaop</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="boot-aop.war">
+      <element id="artifact" artifact-name="bootaop:war exploded" />
+    </root>
+  </artifact>
+</component>

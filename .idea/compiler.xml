@@ -2,49 +2,56 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="boot-wechat" />
-        <module name="boot-data" />
-        <module name="boot-rabbitmq" />
-        <module name="boot-sharding" />
+        <module name="boot-email" />
+        <module name="boot-aync-mvc" />
+        <module name="boot-aop" />
+        <module name="boot-mybatis" />
         <module name="boot-common" />
         <module name="boot-mvc" />
-        <module name="bootasynMvc" />
-        <module name="boot-aync-mvc" />
         <module name="boot-webflux" />
-        <module name="boot-email" />
+        <module name="boot-sharding" />
+        <module name="bootasynMvc" />
         <module name="boot-jdk8" />
+        <module name="boot-rabbitmq" />
         <module name="boot-shiro" />
+        <module name="boot-data" />
+        <module name="boot-wechat" />
         <module name="boot-context" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="8">
-      <module name="boot-aync-mvc" target="1.7" />
+      <module name="boot-aop" target="1.7" />
+      <module name="boot-aync-mvc" target="1.8" />
       <module name="boot-common" target="8" />
-      <module name="boot-context" target="1.7" />
+      <module name="boot-context" target="1.8" />
       <module name="boot-data" target="8" />
-      <module name="boot-email" target="1.7" />
+      <module name="boot-email" target="1.8" />
       <module name="boot-jdk8" target="8" />
       <module name="boot-mvc" target="8" />
-      <module name="boot-rabbitmq" target="1.7" />
-      <module name="boot-sharding" target="1.7" />
-      <module name="boot-shiro" target="1.7" />
+      <module name="boot-mybatis" target="1.8" />
+      <module name="boot-rabbitmq" target="1.8" />
+      <module name="boot-sharding" target="1.8" />
+      <module name="boot-shiro" target="1.8" />
       <module name="boot-webflux" target="8" />
       <module name="boot-wechat" target="1.8" />
-      <module name="springboot2.x" target="1.7" />
+      <module name="springboot2.x" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="boot-aop" options="-parameters" />
       <module name="boot-aync-mvc" options="-parameters" />
       <module name="boot-common" options="-parameters" />
       <module name="boot-context" options="-parameters" />
       <module name="boot-data" options="-parameters" />
       <module name="boot-email" options="-parameters" />
       <module name="boot-mvc" options="-parameters" />
+      <module name="boot-mybatis" options="-parameters" />
       <module name="boot-rabbitmq" options="-parameters" />
       <module name="boot-sharding" options="-parameters" />
       <module name="boot-shiro" options="-parameters" />

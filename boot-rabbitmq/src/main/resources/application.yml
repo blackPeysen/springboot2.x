@@ -1,9 +1,9 @@
 spring:
   rabbitmq:
     addresses: 127.0.0.1:5672
-    username: guest
-    password: guest
-    virtual-host: /
+    username: boot
+    password: boot
+    virtual-host: /boot-ems
     publisher-confirms: true
     publisher-returns: true
     listener:
@@ -32,7 +32,6 @@ spring:
 #配置在boot启动时运行sql脚本
     initialization-mode: always
     schema: classpath:schema.sql
-
 
 mybatis:
   typeAliasesPackage: com.org.peysen.bootrabbitmq.entity
