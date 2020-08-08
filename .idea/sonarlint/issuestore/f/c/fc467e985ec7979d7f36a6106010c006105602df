@@ -1,14 +1,11 @@
 
-Tsquid:S1854"6Remove this useless assignment to local variable "b2".(´ÏÛ±8öÙòœ’.
-V
-squid:S106"9Replace this use of System.out or System.err by a logger.(Óý–Î8Ü»ñœ’.
 [
 squid:S106"9Replace this use of System.out or System.err by a logger.(·‰Øžûÿÿÿÿ8öÙòœ’.
-Esquid:S1481"'Remove this unused "b2" local variable.(´ÏÛ±8öÙòœ’.
-rsquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(„Ÿœ¡
-Ysquid:S1854"6Remove this useless assignment to local variable "b1".(Î¬ïµùÿÿÿÿ8Ü»ñœ’.
-Tsquid:S1854"6Remove this useless assignment to local variable "b3".(ÔÞ·ô8öÙòœ’.
 Jsquid:S1481"'Remove this unused "b1" local variable.(Î¬ïµùÿÿÿÿ8Ü»ñœ’.
-Esquid:S1481"'Remove this unused "b3" local variable.(ÔÞ·ô8öÙòœ’.
+Esquid:S1481"'Remove this unused "b2" local variable.(´ÏÛ±8öÙòœ’.
+V
+squid:S106"9Replace this use of System.out or System.err by a logger.(Óý–Î8Ü»ñœ’.
+rsquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(„Ÿœ¡
 [
 squid:S106"9Replace this use of System.out or System.err by a logger.(Ùˆßžøÿÿÿÿ8öÙòœ’.
+Esquid:S1481"'Remove this unused "b3" local variable.(ÔÞ·ô8öÙòœ’.

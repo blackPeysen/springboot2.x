@@ -13,7 +13,6 @@
       <module fileurl="file://$PROJECT_DIR$/boot-mybatis/boot-mybatis.iml" filepath="$PROJECT_DIR$/boot-mybatis/boot-mybatis.iml" />
       <module fileurl="file://$PROJECT_DIR$/boot-rabbitmq/boot-rabbitmq.iml" filepath="$PROJECT_DIR$/boot-rabbitmq/boot-rabbitmq.iml" />
       <module fileurl="file://$PROJECT_DIR$/boot-sharding/boot-sharding.iml" filepath="$PROJECT_DIR$/boot-sharding/boot-sharding.iml" />
-      <module fileurl="file://$PROJECT_DIR$/boot-shiro/boot-shiro.iml" filepath="$PROJECT_DIR$/boot-shiro/boot-shiro.iml" />
       <module fileurl="file://$PROJECT_DIR$/boot-webflux/boot-webflux.iml" filepath="$PROJECT_DIR$/boot-webflux/boot-webflux.iml" />
       <module fileurl="file://$PROJECT_DIR$/boot-wechat/boot-wechat.iml" filepath="$PROJECT_DIR$/boot-wechat/boot-wechat.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/springboot2.x.iml" filepath="$PROJECT_DIR$/.idea/springboot2.x.iml" />

@@ -1,26 +1,23 @@
 
-"squid:ClassVariableVisibilityCheckR"YMake blockingQueue a static final constant or non-public and provide accessors if needed.(Ë“×8ÆšÇşŠ.
-Esquid:S2189C""Add an end condition to this loop.(˜ïˆÿÿÿÿÿ8ŠãÆşŠ.
-Qsquid:S1444R"3Make this "public static blockingQueue" field final(Ë“×8ÆšÇşŠ.
-Fsquid:S1148\"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8ÆšÇşŠ.
-Œ"squid:ClassVariableVisibilityCheck""RMake orgStr a static final constant or non-public and provide accessors if needed.(Ÿ¶°øÿÿÿÿ8²Ğ¼şŠ.
-"squid:ClassVariableVisibilityCheck?"YMake blockingQueue a static final constant or non-public and provide accessors if needed.(Ë“×8ŠãÆşŠ.
-;squid:S2386R"Make this member "protected".(Ë“×8ÆšÇşŠ.
-dsquid:S2142["FEither re-interrupt this method or rethrow the "InterruptedException".(ä ¹€8ÆšÇşŠ.
-"squid:ClassVariableVisibilityCheck!"MMake j a static final constant or non-public and provide accessors if needed.(áe8²Ğ¼şŠ.
-"squid:ClassVariableVisibilityCheck-"YMake blockingQueue a static final constant or non-public and provide accessors if needed.(Ë“×8²Ğ¼şŠ.
+rsquid:UselessImportCheck"BRemove this unused import 'org.apache.poi.ss.formula.functions.T'.(‚å×‘şÿÿÿÿ8š¼ÑşŠ.
 dsquid:S2142H"FEither re-interrupt this method or rethrow the "InterruptedException".(ä ¹€8ŠãÆşŠ.
+"squid:ClassVariableVisibilityCheck-"YMake blockingQueue a static final constant or non-public and provide accessors if needed.(Ë“×8²Ğ¼şŠ.
+"squid:ClassVariableVisibilityCheck?"YMake blockingQueue a static final constant or non-public and provide accessors if needed.(Ë“×8ŠãÆşŠ.
+Fsquid:S1148\"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8ÆšÇşŠ.
+"squid:ClassVariableVisibilityCheckR"YMake blockingQueue a static final constant or non-public and provide accessors if needed.(Ë“×8ÆšÇşŠ.
 [
 squid:S106Z"9Replace this use of System.out or System.err by a logger.(Á¹¡·ıÿÿÿÿ8õ§ÉşŠ.
-;squid:S2386?"Make this member "protected".(Ë“×8ŠãÆşŠ.
-‡"squid:ClassVariableVisibilityCheck "MMake i a static final constant or non-public and provide accessors if needed.(—ºğøÿÿÿÿ8²Ğ¼şŠ.
-rsquid:UselessImportCheck"BRemove this unused import 'org.apache.poi.ss.formula.functions.T'.(‚å×‘şÿÿÿÿ8š¼ÑşŠ.
-dsquid:S21426"FEither re-interrupt this method or rethrow the "InterruptedException".(ä ¹€8îÃÁşŠ.
 Fsquid:S1148I"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8ŠãÆşŠ.
-Fsquid:S11487"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8îÃÁşŠ.
-Esquid:S2189V""Add an end condition to this loop.(˜ïˆÿÿÿÿÿ8ÆšÇşŠ.
-Esquid:S21891""Add an end condition to this loop.(˜ïˆÿÿÿÿÿ8­¦¿şŠ.
-Qsquid:S1444?"3Make this "public static blockingQueue" field final(Ë“×8ŠãÆşŠ.
-;squid:S2386-"Make this member "protected".(Ë“×8²Ğ¼şŠ.
+Qsquid:S1444R"3Make this "public static blockingQueue" field final(Ë“×8ÆšÇşŠ.
+Œ"squid:ClassVariableVisibilityCheck""RMake orgStr a static final constant or non-public and provide accessors if needed.(Ÿ¶°øÿÿÿÿ8²Ğ¼şŠ.
 Qsquid:S1444-"3Make this "public static blockingQueue" field final(Ë“×8²Ğ¼şŠ.
+;squid:S2386-"Make this member "protected".(Ë“×8²Ğ¼şŠ.
+dsquid:S2142["FEither re-interrupt this method or rethrow the "InterruptedException".(ä ¹€8ÆšÇşŠ.
+‡"squid:ClassVariableVisibilityCheck "MMake i a static final constant or non-public and provide accessors if needed.(—ºğøÿÿÿÿ8²Ğ¼şŠ.
+;squid:S2386?"Make this member "protected".(Ë“×8ŠãÆşŠ.
+dsquid:S21426"FEither re-interrupt this method or rethrow the "InterruptedException".(ä ¹€8îÃÁşŠ.
+Fsquid:S11487"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8îÃÁşŠ.
+"squid:ClassVariableVisibilityCheck!"MMake j a static final constant or non-public and provide accessors if needed.(áe8²Ğ¼şŠ.
+Qsquid:S1444?"3Make this "public static blockingQueue" field final(Ë“×8ŠãÆşŠ.
+;squid:S2386R"Make this member "protected".(Ë“×8ÆšÇşŠ.
 vsquid:UselessImportCheck"FRemove this unused import 'com.org.peysen.bootcommon.pojo.response.R'.(ó€ŞËøÿÿÿÿ8˜ ½şŠ.
