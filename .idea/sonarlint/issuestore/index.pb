@@ -447,3 +447,6 @@ w
 G.idea/libraries/Maven__org_springframework_spring_orm_5_1_8_RELEASE.xml,4/a/4a5510700e96949705447aef52ce7f6d8d1ea2d4
 ~
 Nboot-rabbitmq/src/main/java/com/org/peysen/bootrabbitmq/testMq/DirectSend.java,1/d/1d930cb11e8ef40c338d2d9e072a793b70c0107f
+:
+
+.gitignore,a/5/a5cc2925ca8258af241be7e5b0381edf30266302

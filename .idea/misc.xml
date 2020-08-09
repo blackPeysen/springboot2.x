@@ -18,6 +18,7 @@
         <option value="$PROJECT_DIR$/boot-reactor/pom.xml" />
         <option value="$PROJECT_DIR$/boot-wechat/pom.xml" />
         <option value="$PROJECT_DIR$/boot-mybatis/pom.xml" />
+        <option value="$PROJECT_DIR$/boot-shiro/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">

@@ -18,6 +18,7 @@
         <module name="bootasynMvc" />
         <module name="boot-jdk8" />
         <module name="boot-rabbitmq" />
+        <module name="boot-shiro" />
         <module name="boot-data" />
         <module name="boot-wechat" />
         <module name="boot-context" />

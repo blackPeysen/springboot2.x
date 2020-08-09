@@ -1,4 +1,4 @@
-package com.org.peysen.bootshiro;
+package com.peysen.bootshiro;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
