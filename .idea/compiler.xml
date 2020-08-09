@@ -25,8 +25,8 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="8">
-      <module name="boot-aop" target="1.7" />
-      <module name="boot-aync-mvc" target="1.8" />
+      <module name="boot-aop" target="1.8" />
+      <module name="boot-aync-mvc" target="1.7" />
       <module name="boot-common" target="8" />
       <module name="boot-context" target="1.8" />
       <module name="boot-data" target="8" />
