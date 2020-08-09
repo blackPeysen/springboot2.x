@@ -1,5 +1,6 @@
-package com.org.peysen.bootrabbitmq.testMq;
+package com.org.peysen.bootrabbitmq.testMq.helloWorld;
 
+import com.org.peysen.bootrabbitmq.util.RabbitMQUtil;
 import com.rabbitmq.client.Channel;
 import com.rabbitmq.client.Connection;
 import com.rabbitmq.client.ConnectionFactory;
@@ -14,25 +15,15 @@ import java.util.concurrent.TimeoutException;
  */
 public class DirectSend {
     public static void main(String[] args) throws IOException, TimeoutException {
-        // 设置连接工厂
-        ConnectionFactory connectionFactory = new ConnectionFactory();
-        connectionFactory.setHost("localhost");
-        connectionFactory.setPort(5672);
-        connectionFactory.setUsername("boot");
-        connectionFactory.setPassword("boot");
-        connectionFactory.setVirtualHost("boot-ems");
-
         // 根据连接工厂生成一个连接
-        Connection connection = connectionFactory.newConnection();
-
+        Connection connection = RabbitMQUtil.getConnection();
         // 根据连接生成一个通道
         Channel channel = connection.createChannel();
 
         channel.queueDeclare("hello", false, false, false, null);
         channel.basicPublish("", "hello", false, null, "hello RabbitMq".getBytes());
 
-        channel.close();
-        connection.close();
+        RabbitMQUtil.closeConn(connection,channel);
 
         System.out.println("直连hello队列，发布消息成功");
     }
