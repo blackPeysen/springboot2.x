@@ -1,9 +1,8 @@
-package com.org.peysen.bootrabbitmq.testMq.helloWorld;
+package com.org.peysen.bootrabbitmq.testMq.dicter;
 
 import com.org.peysen.bootrabbitmq.util.RabbitMQUtil;
 import com.rabbitmq.client.Channel;
 import com.rabbitmq.client.Connection;
-import com.rabbitmq.client.ConnectionFactory;
 
 import java.io.IOException;
 import java.util.concurrent.TimeoutException;
@@ -20,7 +19,19 @@ public class DirectSend {
         // 根据连接生成一个通道
         Channel channel = connection.createChannel();
 
+        /**
+         * 直接声明一个消息队列
+         * 参数1：队列名称
+         * 参数2：是否持久化队列
+         * 参数3：是否独占
+         * 参数4：当没有消费者与该队列连接时，是否自动删除
+         * 参数5：额外参数
+         */
         channel.queueDeclare("hello", false, false, false, null);
+
+        /**
+         * 向消息队列中发布消息
+         */
         channel.basicPublish("", "hello", false, null, "hello RabbitMq".getBytes());
 
         RabbitMQUtil.closeConn(connection,channel);

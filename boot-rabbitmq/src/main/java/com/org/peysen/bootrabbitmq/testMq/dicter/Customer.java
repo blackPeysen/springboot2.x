@@ -1,4 +1,4 @@
-package com.org.peysen.bootrabbitmq.testMq.helloWorld;
+package com.org.peysen.bootrabbitmq.testMq.dicter;
 
 import com.org.peysen.bootrabbitmq.util.RabbitMQUtil;
 import com.rabbitmq.client.*;
