@@ -20,6 +20,7 @@ public class DirectSender implements Sender<Order>{
 
     @Override
     public void sender(Order order) {
-        this.rabbitTemplate.convertAndSend(RabbitConfig.DIRECT_EXCHANGE, "direct.pwl", order);
+//        this.rabbitTemplate.convertAndSend(RabbitConfig.DIRECT_EXCHANGE, "", order);
+        this.rabbitTemplate.convertAndSend("", RabbitConfig.DIRECT_QUEUE1, order);
     }
 }

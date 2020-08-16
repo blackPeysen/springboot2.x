@@ -22,6 +22,7 @@ public class Provider {
         //此处注意：我们声明了要回复的队列。队列名称由RabbitMQ自动创建。
         String callbackQueueName = channel.queueDeclare().getQueue();
         final String corrID = UUID.randomUUID().toString();
+
         /**
          * 指定要发送的路由键和消息实体
          */

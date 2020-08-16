@@ -1,16 +1,19 @@
 spring:
   rabbitmq:
-    addresses: 127.0.0.1:5672
-    username: boot
-    password: boot
-    virtual-host: /boot-ems
-    publisher-confirms: true
-    publisher-returns: true
-    listener:
-      direct:
-        acknowledge-mode: auto
-      simple:
-        acknowledge-mode: auto
+    # rabbitMQ集群连接方式
+    addresses: 127.0.0.1:5671, 127.0.0.1:5672, 127.0.0.1:5673
+    # rabbitMQ的负载均衡连接方式
+    #addresses: 127.0.0.1:5670
+    username: guest
+    password: guest
+    virtual-host: /
+#    publisher-confirms: true
+#    publisher-returns: true
+#    listener:
+#      direct:
+#        acknowledge-mode: auto
+#      simple:
+#        acknowledge-mode: auto
 
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver

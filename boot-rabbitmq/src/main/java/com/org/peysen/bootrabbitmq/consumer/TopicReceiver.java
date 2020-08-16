@@ -20,7 +20,7 @@ import org.springframework.stereotype.Component;
 public class TopicReceiver {
 
     // queues是指要监听的队列的名字
-    @RabbitListener(queues = "order-queue")
+    //@RabbitListener(queues = "order-queue")
     public void receiveTopic(Order order) {
         System.out.println("【order-queue队列监听到消息】" + order.toString());
     }

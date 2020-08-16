@@ -88,7 +88,7 @@ public class DruidSourceConfiguration {
         //sqlSessionFactoryBean.setConfigLocation(new ClassPathResource(myBatisConfigPath));
 
         // 设置mapper对应的XML 文件的路径
-        sqlSessionFactoryBean.setMapperLocations(resolver.getResources("classpath:mappers/*Mapper.xml"));
+        sqlSessionFactoryBean.setMapperLocations(resolver.getResources("classpath:mapper/*Mapper.xml"));
 
         // 设置数据源
         sqlSessionFactoryBean.setDataSource(dataSource);

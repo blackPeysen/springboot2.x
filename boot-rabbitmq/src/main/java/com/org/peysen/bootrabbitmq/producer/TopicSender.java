@@ -4,6 +4,7 @@ import com.org.peysen.bootrabbitmq.config.RabbitConfig;
 import com.org.peysen.bootrabbitmq.entity.Order;
 import org.springframework.amqp.core.AmqpTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 /**
  * @Description: java类作用描述
@@ -11,6 +12,7 @@ import org.springframework.beans.factory.annotation.Autowired;
  * @CreateDate: 2019/7/9 07:45
  * @UpdateRemark: The modified content
  */
+@Service
 public class TopicSender implements Sender<Order> {
     @Autowired
     private AmqpTemplate rabbitTemplate;

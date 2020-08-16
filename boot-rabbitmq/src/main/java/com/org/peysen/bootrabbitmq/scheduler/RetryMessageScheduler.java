@@ -30,7 +30,7 @@ public class RetryMessageScheduler {
     private RabbitMqSender rabbitMqSender;
 
 
-    @Scheduled(initialDelay = 3000, fixedDelay = 10000)
+    //@Scheduled(initialDelay = 3000, fixedDelay = 10000)
     public void retrySend(){
         System.out.println("定时任务开始。。。。");
         List<MessageInfo> messageInfoList = messageLogRepository.queryStatusAndTimeout();

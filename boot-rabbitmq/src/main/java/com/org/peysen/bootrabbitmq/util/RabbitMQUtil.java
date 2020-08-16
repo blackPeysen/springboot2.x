@@ -19,13 +19,18 @@ public class RabbitMQUtil {
     static {
         connectionFactory = new ConnectionFactory();
         connectionFactory.setHost("localhost");
-        connectionFactory.setPort(5672);
-        connectionFactory.setUsername("boot");
-        connectionFactory.setPassword("boot");
-        connectionFactory.setVirtualHost("boot-ems");
+        connectionFactory.setPort(5673);
+        connectionFactory.setUsername("guest");
+        connectionFactory.setPassword("guest");
+        connectionFactory.setVirtualHost("/");
     }
 
     public static Connection getConnection() throws IOException, TimeoutException {
+        return connectionFactory.newConnection();
+    }
+
+    public static Connection getConnection(int port) throws IOException, TimeoutException {
+        connectionFactory.setPort(port);
         return connectionFactory.newConnection();
     }
 
