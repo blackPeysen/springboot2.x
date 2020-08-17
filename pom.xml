@@ -17,11 +17,11 @@
         <module>boot-data</module>
         <module>boot-email</module>
         <module>boot-webflux</module>
-        <module>boot-jdk8</module>
         <module>boot-sharding</module>
         <module>boot-aop</module>
         <module>boot-shiro</module>
         <module>boot-mybatis</module>
+        <module>boot-zk</module>
     </modules>
 
     <groupId>com.org.peysen</groupId>
