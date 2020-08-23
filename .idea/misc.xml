@@ -24,6 +24,7 @@
     </option>
     <option name="ignoredFiles">
       <set>
+        <option value="$PROJECT_DIR$/boot-data/pom.xml" />
         <option value="$PROJECT_DIR$/boot-jdk8/pom.xml" />
       </set>
     </option>

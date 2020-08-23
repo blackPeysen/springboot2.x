@@ -1,4 +1,4 @@
-package com.org.peysen.bootdata.externalizedConfig;
+package com.org.peysen.bootcontext.externalizedConfig;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.SpringApplicationRunListener;

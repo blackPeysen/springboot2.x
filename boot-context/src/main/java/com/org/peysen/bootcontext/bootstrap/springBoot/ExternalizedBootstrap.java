@@ -1,4 +1,4 @@
-package com.org.peysen.bootdata.bootstrap;
+package com.org.peysen.bootcontext.bootstrap.springBoot;
 
 import org.springframework.boot.WebApplicationType;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;

@@ -1,4 +1,4 @@
-package com.org.peysen.bootdata.externalizedConfig;
+package com.org.peysen.bootcontext.externalizedConfig;
 
 import org.springframework.context.ApplicationContextInitializer;
 import org.springframework.context.ConfigurableApplicationContext;
