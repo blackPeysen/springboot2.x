@@ -21,6 +21,7 @@
         <module>boot-shiro</module>
         <module>boot-mybatis</module>
         <module>boot-zk</module>
+        <module>boot-gof23</module>
     </modules>
 
     <groupId>com.org.peysen</groupId>
