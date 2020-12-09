@@ -7,24 +7,29 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="boot-common" />
+        <module name="boot-aync-mvc" />
+        <module name="boot-zk" />
         <module name="boot-rabbitmq" />
         <module name="boot-sharding" />
+        <module name="boot-gof23" />
         <module name="boot-mvc" />
+        <module name="boot-shiro" />
+        <module name="boot-mybatis" />
         <module name="boot-webflux" />
         <module name="boot-email" />
-        <module name="boot-shiro" />
-        <module name="boot-zk" />
+        <module name="boot-common" />
+        <module name="boot-aop" />
         <module name="boot-context" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="8">
       <module name="boot-aop" target="1.8" />
-      <module name="boot-aync-mvc" target="1.7" />
+      <module name="boot-aync-mvc" target="1.8" />
       <module name="boot-common" target="8" />
       <module name="boot-context" target="1.8" />
       <module name="boot-data" target="8" />
       <module name="boot-email" target="1.8" />
+      <module name="boot-gof23" target="1.8" />
       <module name="boot-jdk8" target="8" />
       <module name="boot-mvc" target="8" />
       <module name="boot-mybatis" target="1.8" />
@@ -45,6 +50,7 @@
       <module name="boot-context" options="-parameters" />
       <module name="boot-data" options="-parameters" />
       <module name="boot-email" options="-parameters" />
+      <module name="boot-gof23" options="-parameters" />
       <module name="boot-mvc" options="-parameters" />
       <module name="boot-mybatis" options="-parameters" />
       <module name="boot-rabbitmq" options="-parameters" />
