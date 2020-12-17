@@ -1,4 +1,4 @@
-package com.peysen.gof23.structural.decorator;
+package com.peysen.gof23.structural.decorator.flavour;
 
 /**
  * @Author: peimengmeng

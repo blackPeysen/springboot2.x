@@ -1,4 +1,6 @@
-package com.peysen.gof23.structural.decorator;
+package com.peysen.gof23.structural.decorator.drink;
+
+import com.peysen.gof23.structural.decorator.drink.AbstractDrink;
 
 /**
  * @Author: peimengmeng

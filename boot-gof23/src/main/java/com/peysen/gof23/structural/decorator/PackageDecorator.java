@@ -1,5 +1,9 @@
 package com.peysen.gof23.structural.decorator;
 
+import com.peysen.gof23.structural.decorator.drink.AbstractDrink;
+import com.peysen.gof23.structural.decorator.flavour.AbstractFlavour;
+import com.peysen.gof23.structural.decorator.packake.AbstractPackage;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -9,7 +13,7 @@ import java.util.List;
  * @Desc: 包装盒装饰器
  */
 public class PackageDecorator extends Decorator {
-    private List<AbstractFlavour> flavourList = new ArrayList<>();
+    private List<AbstractPackage> packageList = new ArrayList<>();
 
     public PackageDecorator(AbstractDrink drink) {
         super(drink);
@@ -17,10 +21,10 @@ public class PackageDecorator extends Decorator {
 
     @Override
     protected double extraCost() {
-        return flavourList.stream().mapToDouble(AbstractFlavour::getFlavourPrice).sum();
+        return packageList.stream().mapToDouble(AbstractPackage::getPackagePrice).sum();
     }
 
-    public void addFlavour(AbstractFlavour flavour) {
-        flavourList.add(flavour);
+    public void addPackage(AbstractPackage abstractPackage) {
+        packageList.add(abstractPackage);
     }
 }

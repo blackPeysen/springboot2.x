@@ -1,5 +1,8 @@
 package com.peysen.gof23.structural.decorator;
 
+import com.peysen.gof23.structural.decorator.drink.AbstractDrink;
+import com.peysen.gof23.structural.decorator.flavour.AbstractFlavour;
+
 import java.util.ArrayList;
 import java.util.List;
 
