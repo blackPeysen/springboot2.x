@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <bean id="peysen" class="com.org.peysen.bootcommon.gof23.protoType.Penson" scope="prototype">
+        <property name="name" value="peimengmeng"/>
+        <property name="address" ref="address"/>
+    </bean>
+
+    <bean id="address" class="com.org.peysen.bootcommon.gof23.protoType.Address" scope="prototype">
+        <property name="cityName" value="nanjing"/>
+    </bean>
+
+</beans>

@@ -6,6 +6,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
 import java.util.Map;
 
 /**
@@ -30,6 +32,11 @@ public class HelloController {
     public String helloWorld(@ModelAttribute("id") Integer id){
         System.out.println("helloWorld:" + id);
         return "index";
+    }
+
+    @RequestMapping("/download")
+    public void download(HttpServletResponse response) throws IOException {
+        response.getOutputStream().write("index".getBytes());
     }
 
 }

@@ -4,6 +4,10 @@ import com.org.peysen.bootcontext.entity.Knight;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.function.BiFunction;
+
 /**
  * @Description: Link {ClassPathXmlApplicationContext}
  * @Author: peysen
@@ -20,5 +24,4 @@ public class ClassPathXmlApplicationContextBootstarp {
         Knight knight = context.getBean(Knight.class);
         knight.enbarkOnQuest();
     }
-
 }
