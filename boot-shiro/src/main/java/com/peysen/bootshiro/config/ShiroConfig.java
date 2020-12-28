@@ -2,16 +2,13 @@ package com.peysen.bootshiro.config;
 
 import com.org.peysen.bootshiro.cache.RedisCache;
 import com.org.peysen.bootshiro.cache.RedisCacheManager;
-import com.org.peysen.bootshiro.filter.RolesOrFilter;
 import com.org.peysen.bootshiro.session.CustomSessionManager;
 import com.org.peysen.bootshiro.session.RedisSessionDao;
+import com.peysen.bootshiro.filter.RolesOrFilter;
 import org.apache.commons.collections.map.HashedMap;
 import org.apache.shiro.authc.credential.HashedCredentialsMatcher;
-import org.apache.shiro.cache.Cache;
 import org.apache.shiro.cache.CacheManager;
 import org.apache.shiro.mgt.SecurityManager;
-import org.apache.shiro.session.mgt.DefaultSessionManager;
-import org.apache.shiro.session.mgt.SessionManager;
 import org.apache.shiro.session.mgt.eis.SessionDAO;
 import org.apache.shiro.spring.LifecycleBeanPostProcessor;
 import org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor;
@@ -24,6 +21,7 @@ import org.springframework.aop.framework.autoproxy.DefaultAdvisorAutoProxyCreato
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.DependsOn;
+
 import javax.servlet.Filter;
 import java.util.LinkedHashMap;
 import java.util.Map;
