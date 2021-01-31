@@ -4,6 +4,8 @@ import com.org.peysen.bootcommon.configuration.HelloWorldConfiguration;
 import org.springframework.context.annotation.ImportSelector;
 import org.springframework.core.type.AnnotationMetadata;
 
+import java.util.Map;
+
 /**
  * @Description: helloworld {@link ImportSelector} 实现
  * @Author: peimm

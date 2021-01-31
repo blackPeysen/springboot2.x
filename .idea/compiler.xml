@@ -13,6 +13,17 @@
         <module name="boot-sharding" />
         <module name="boot-gof23" />
         <module name="boot-mvc" />
+        <module name="boot-rabbitmq" />
+        <module name="boot-context" />
+        <module name="boot-email" />
+        <module name="boot-webflux" />
+        <module name="boot-sharding" />
+        <module name="boot-aop" />
+        <module name="bootasynMvc" />
+        <module name="boot-zk" />
+        <module name="boot-mybatis" />
+        <module name="boot-common" />
+        <module name="boot-mvc" />
         <module name="boot-shiro" />
         <module name="boot-mybatis" />
         <module name="boot-webflux" />
@@ -20,6 +31,7 @@
         <module name="boot-common" />
         <module name="boot-aop" />
         <module name="boot-context" />
+        <module name="boot-aync-mvc" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="8">
