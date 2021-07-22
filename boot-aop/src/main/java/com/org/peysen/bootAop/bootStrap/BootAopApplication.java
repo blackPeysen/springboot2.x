@@ -1,27 +1,22 @@
-package com.org.peysen.bootAop;
+package com.org.peysen.bootAop.bootStrap;
 
-import com.org.peysen.bootAop.annotation.DobaEnableAspectJAutoProxy;
-import com.org.peysen.bootAop.service.AspectJServiceImpl;
-import com.org.peysen.bootAop.service.CrovRpcServiceImpl;
 import com.org.peysen.bootAop.service.CrovServiceImpl;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
 
+@ComponentScan(basePackages = "com.org.peysen.bootAop")
 @SpringBootApplication
-//@EnableAspectJAutoProxy
-@DobaEnableAspectJAutoProxy
+@EnableAspectJAutoProxy
 public class BootAopApplication {
 
     public static void main(String[] args) {
         ConfigurableApplicationContext applicationContext = SpringApplication.run(BootAopApplication.class, args);
 
-//        AspectJServiceImpl aspectJServiceImpl = applicationContext.getBean("aspectJServiceImpl", AspectJServiceImpl.class);
-//        aspectJServiceImpl.test1();
-
-        CrovRpcServiceImpl crovService = applicationContext.getBean(CrovRpcServiceImpl.class);
-        crovService.remoteRpcInvoke();
+        CrovServiceImpl crovService = applicationContext.getBean("crovServiceImpl", CrovServiceImpl.class);
+        crovService.invoke();
 
         applicationContext.close();
     }

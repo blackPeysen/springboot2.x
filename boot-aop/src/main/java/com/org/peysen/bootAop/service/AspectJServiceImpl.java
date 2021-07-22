@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
  */
 
 @Service
-public class AspectJServiceDemo {
+public class AspectJServiceImpl {
 
     public void test1(){
         System.out.println("test1.。。。。");

@@ -22,8 +22,8 @@ import org.springframework.stereotype.Component;
  *                  如throws java.lang.IllegalArgumentException, java.lang.ArrayIndexOutOfBoundsException。
  */
 
-@Aspect
-@Component
+//@Aspect
+//@Component
 public class ExecutionAspectJDemo {
 
     // 匹配com.org.peysen.bootAop.service包中所有public方法
@@ -31,7 +31,7 @@ public class ExecutionAspectJDemo {
     public void pointCut1(){}
 
     // 匹配com.org.peysen.bootAop.service.AspectJServiceDemo类中所有public 方法
-    @Pointcut("execution(public * com.org.peysen.bootAop.service.AspectJServiceDemo.*(..))")
+    @Pointcut("execution(public * com.org.peysen.bootAop.service.AspectJServiceImpl.*(..))")
     public void pointCut2(){}
 
     @After(value = "pointCut1()")
