@@ -22,6 +22,8 @@
         <module>boot-mybatis</module>
         <module>boot-zk</module>
         <module>boot-gof23</module>
+        <module>boot-kafka</module>
+        <module>boot-netty</module>
     </modules>
 
     <groupId>com.org.peysen</groupId>
