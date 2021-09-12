@@ -11,6 +11,8 @@
     <file type="web" url="file://$PROJECT_DIR$/boot-asynMvc" />
     <file type="web" url="file://$PROJECT_DIR$/boot-cache" />
     <file type="web" url="file://$PROJECT_DIR$/boot-jdk8" />
+    <file type="web" url="file://$PROJECT_DIR$/boot-kafka" />
+    <file type="web" url="file://$PROJECT_DIR$/boot-netty" />
     <file type="web" url="file://$PROJECT_DIR$/boot-sharding" />
   </component>
   <component name="JavaScriptSettings">
@@ -35,7 +37,7 @@
       </set>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="false" project-jdk-name="1.8" project-jdk-type="JavaSDK" />
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="1.8" project-jdk-type="JavaSDK" />
   <component name="SuppressionsComponent">
     <option name="suppComments" value="[]" />
   </component>

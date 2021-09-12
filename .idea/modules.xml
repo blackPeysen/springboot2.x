@@ -8,8 +8,10 @@
       <module fileurl="file://$PROJECT_DIR$/boot-context/boot-context.iml" filepath="$PROJECT_DIR$/boot-context/boot-context.iml" />
       <module fileurl="file://$PROJECT_DIR$/boot-email/boot-email.iml" filepath="$PROJECT_DIR$/boot-email/boot-email.iml" />
       <module fileurl="file://$PROJECT_DIR$/boot-gof23/boot-gof23.iml" filepath="$PROJECT_DIR$/boot-gof23/boot-gof23.iml" />
+      <module fileurl="file://$PROJECT_DIR$/boot-kafka/boot-kafka.iml" filepath="$PROJECT_DIR$/boot-kafka/boot-kafka.iml" />
       <module fileurl="file://$PROJECT_DIR$/boot-mvc/boot-mvc.iml" filepath="$PROJECT_DIR$/boot-mvc/boot-mvc.iml" />
       <module fileurl="file://$PROJECT_DIR$/boot-mybatis/boot-mybatis.iml" filepath="$PROJECT_DIR$/boot-mybatis/boot-mybatis.iml" />
+      <module fileurl="file://$PROJECT_DIR$/boot-netty/boot-netty.iml" filepath="$PROJECT_DIR$/boot-netty/boot-netty.iml" />
       <module fileurl="file://$PROJECT_DIR$/boot-rabbitmq/boot-rabbitmq.iml" filepath="$PROJECT_DIR$/boot-rabbitmq/boot-rabbitmq.iml" />
       <module fileurl="file://$PROJECT_DIR$/boot-sharding/boot-sharding.iml" filepath="$PROJECT_DIR$/boot-sharding/boot-sharding.iml" />
       <module fileurl="file://$PROJECT_DIR$/boot-shiro/boot-shiro.iml" filepath="$PROJECT_DIR$/boot-shiro/boot-shiro.iml" />
