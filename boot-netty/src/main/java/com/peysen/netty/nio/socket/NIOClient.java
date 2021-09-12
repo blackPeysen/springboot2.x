@@ -25,6 +25,7 @@ public class NIOClient {
             }
         }
 
+        System.out.println("连接服务器成功，准备发送数据。。");
         // 连接成功，就可以发送数据
         String data = "hello, world";
         ByteBuffer byteBuffer = ByteBuffer.wrap(data.getBytes(StandardCharsets.UTF_8));
@@ -32,8 +33,6 @@ public class NIOClient {
         // 将buffer中的数据写入channle中
         socketChannel.write(byteBuffer);
 
-        System.in.read();
-
-//        socketChannel.close();
+        socketChannel.close();
     }
 }

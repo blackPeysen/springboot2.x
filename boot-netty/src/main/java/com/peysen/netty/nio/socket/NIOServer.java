@@ -35,14 +35,13 @@ public class NIOServer {
         // 循环等待客户端连接
         while (true){
             // 等待1s，看是否有客户端发起连接请求
-            if (selector.select() == 0){
+            if (selector.select(1000) == 0){
                 System.out.println("服务器端等待了一段时间，没有事件发生。。");
                 continue;
             }
 
             // 说明此时有事件发生，获取selectionKey集合并处理, 可以通过selectionKey 反向获取到对应的channle
             Set<SelectionKey> selectionKeys = selector.selectedKeys();
-
             handleEvent(serverSocketChannel, selector, selectionKeys);
         }
     }
@@ -56,31 +55,59 @@ public class NIOServer {
      * @throws IOException
      */
     private static void handleEvent(ServerSocketChannel serverSocketChannel, Selector selector, Set<SelectionKey> selectionKeys) throws IOException {
+        System.out.println("事件数量：" + selectionKeys.size());
         Iterator<SelectionKey> iterator = selectionKeys.iterator();
+
         while (iterator.hasNext()){
             SelectionKey selectionKey = iterator.next();
+            System.out.println("selectionKey：" + selectionKey.hashCode());
+
+            // 手动从集合中将当前的selectionKey移除，防止该事件被重复处理
+            iterator.remove();
 
             // 说明是客户端连接事件
             if (selectionKey.isAcceptable()){
-                // 为该客户端生成一个SocketChannel,并设置为非堵塞
-                SocketChannel socketChannel = serverSocketChannel.accept();
-                socketChannel.configureBlocking(false);
-                System.out.println("客户端生成成功：" + socketChannel.hashCode());
-                // 注册到selector上, 关注事件为OP_READ(可读事件)，同时给socketChannel绑定buffer
-                socketChannel.register(selector, SelectionKey.OP_READ, ByteBuffer.allocate(1024));
+                handleAccept(serverSocketChannel, selector);
             }
 
             // 说明是客户端可读事件
             if (selectionKey.isReadable()){
-                SocketChannel channel = (SocketChannel) selectionKey.channel();
-                ByteBuffer byteBuffer = (ByteBuffer) selectionKey.attachment();
-                channel.read(byteBuffer);
-
-                System.out.println("从客户端中获取数据：" + getString(byteBuffer));
+                handleRead(selectionKey);
             }
+        }
+    }
 
-            // 手动从集合中将当前的selectionKey移除，防止该事件被重复处理
-            iterator.remove();
+    private static void handleAccept(ServerSocketChannel serverSocketChannel, Selector selector) throws IOException {
+        // 为该客户端生成一个SocketChannel,并设置为非堵塞
+        SocketChannel socketChannel = serverSocketChannel.accept();
+        socketChannel.configureBlocking(false);
+
+        System.out.println("客户端生成成功：" + socketChannel.hashCode());
+
+        // 注册到selector上, 关注事件为OP_READ(可读事件)，同时给socketChannel绑定buffer
+        socketChannel.register(selector, SelectionKey.OP_READ, ByteBuffer.allocate(1024));
+    }
+
+    private static void handleRead(SelectionKey selectionKey) throws IOException {
+        SocketChannel channel = (SocketChannel) selectionKey.channel();
+        System.out.println("channle : " + channel.hashCode());
+        ByteBuffer byteBuffer = (ByteBuffer) selectionKey.attachment();
+
+        try {
+            if (channel.isOpen()){
+                int read = 0;
+                while((read = channel.read(byteBuffer)) > 0){
+                    System.out.println("从客户端中获取数据：" + new String(byteBuffer.array(), 0, read));
+                    byteBuffer.clear();
+                }
+            } else {
+                System.out.println("客户端已经被断开。。。。");
+                return;
+            }
+        } catch (Exception e){
+            System.out.println("客户端断开。。。。");
+            selectionKey.cancel();
+            channel.close();
         }
     }
 
