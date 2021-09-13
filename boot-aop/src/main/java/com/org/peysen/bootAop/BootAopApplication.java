@@ -10,8 +10,7 @@ import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
 
 @SpringBootApplication
-//@EnableAspectJAutoProxy
-@DobaEnableAspectJAutoProxy
+@EnableAspectJAutoProxy
 public class BootAopApplication {
 
     public static void main(String[] args) {

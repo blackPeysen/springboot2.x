@@ -55,12 +55,12 @@ public class NIOServer {
      * @throws IOException
      */
     private static void handleEvent(ServerSocketChannel serverSocketChannel, Selector selector, Set<SelectionKey> selectionKeys) throws IOException {
-        System.out.println("事件数量：" + selectionKeys.size());
+        System.out.println("事件数量:" + selectionKeys.size());
         Iterator<SelectionKey> iterator = selectionKeys.iterator();
 
         while (iterator.hasNext()){
             SelectionKey selectionKey = iterator.next();
-            System.out.println("selectionKey：" + selectionKey.hashCode());
+            System.out.println("selectionKey:" + selectionKey.hashCode());
 
             // 手动从集合中将当前的selectionKey移除，防止该事件被重复处理
             iterator.remove();
@@ -82,7 +82,7 @@ public class NIOServer {
         SocketChannel socketChannel = serverSocketChannel.accept();
         socketChannel.configureBlocking(false);
 
-        System.out.println("客户端生成成功：" + socketChannel.hashCode());
+        System.out.println("客户端生成成功:" + socketChannel.hashCode());
 
         // 注册到selector上, 关注事件为OP_READ(可读事件)，同时给socketChannel绑定buffer
         socketChannel.register(selector, SelectionKey.OP_READ, ByteBuffer.allocate(1024));
@@ -90,19 +90,27 @@ public class NIOServer {
 
     private static void handleRead(SelectionKey selectionKey) throws IOException {
         SocketChannel channel = (SocketChannel) selectionKey.channel();
-        System.out.println("channle : " + channel.hashCode());
+        System.out.println("channle: " + channel.hashCode());
         ByteBuffer byteBuffer = (ByteBuffer) selectionKey.attachment();
 
         try {
-            if (channel.isOpen()){
-                int read = 0;
-                while((read = channel.read(byteBuffer)) > 0){
-                    System.out.println("从客户端中获取数据：" + new String(byteBuffer.array(), 0, read));
-                    byteBuffer.clear();
+            int read = 0;
+            while(true){
+                byteBuffer.clear();
+                read = channel.read(byteBuffer);
+
+                if (read == -1){
+                    System.out.println("客户端断开。。。。");
+                    selectionKey.cancel();
+                    channel.close();
+                    break;
                 }
-            } else {
-                System.out.println("客户端已经被断开。。。。");
-                return;
+                if (read == 0){
+                    System.out.println("客户端没有数据写入。。");
+                    break;
+                }
+
+                System.out.println("从客户端中获取数据:" + new String(byteBuffer.array(), 0, read));
             }
         } catch (Exception e){
             System.out.println("客户端断开。。。。");

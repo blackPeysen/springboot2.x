@@ -12,7 +12,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class CrovRpcServiceImpl {
 
-    public String remoteRpcInvoke(){
+    public String remoteRpcInvoke(int a){
         System.out.println("这是一个rpc远程调用接口。。。");
 
         return "这是一个rpc远程调用接口。。。";

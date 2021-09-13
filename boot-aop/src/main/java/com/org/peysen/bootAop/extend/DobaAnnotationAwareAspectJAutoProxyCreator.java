@@ -1,6 +1,7 @@
 package com.org.peysen.bootAop.extend;
 
 import com.org.peysen.bootAop.annotation.CrovRpc;
+import com.org.peysen.bootAop.aspectJ.ExecutionAspectJDemo;
 import com.org.peysen.bootAop.service.AspectJServiceImpl;
 import com.org.peysen.bootAop.service.CrovRpcServiceImpl;
 import org.aopalliance.aop.Advice;
@@ -39,6 +40,8 @@ public class DobaAnnotationAwareAspectJAutoProxyCreator extends AnnotationAwareA
     private volatile List<String> aspectBeanNames;
 
     private final Map<String, List<Advisor>> advisorsCache = new ConcurrentHashMap<>();
+
+    private ExecutionAspectJDemo demo = new ExecutionAspectJDemo();
 
     //private final ParameterNameDiscoverer parameterNameDiscoverer = new DobaAspectJAnnotationParameterNameDiscoverer();
 
@@ -134,12 +137,15 @@ public class DobaAnnotationAwareAspectJAutoProxyCreator extends AnnotationAwareA
         if (expressionPointcut == null) {
             return null;
         }
-        SingletonAspectInstanceFactory instanceFactory = new SingletonAspectInstanceFactory(this);
+        // todo : this
+        SingletonAspectInstanceFactory instanceFactory = new SingletonAspectInstanceFactory(demo);
 
         AbstractAspectJAdvice advice = new AspectJAfterReturningAdvice(aspectJBeforeAdviceMethod(), expressionPointcut, instanceFactory);
 
         // Now to configure the advice...
         advice.setDeclarationOrder(getOrder());
+
+        // todo : 参数
         String[] argNames = null; //this.parameterNameDiscoverer.getParameterNames(candidateAdviceMethod);
         if (argNames != null) {
             advice.setArgumentNamesFromStringArray(argNames);
@@ -164,9 +170,9 @@ public class DobaAnnotationAwareAspectJAutoProxyCreator extends AnnotationAwareA
 
     private Method aspectJBeforeAdviceMethod(){
         Method method = null;
-        Class<? extends DobaAnnotationAwareAspectJAutoProxyCreator> aClass = this.getClass();
+        Class aClass = this.demo.getClass();
         try {
-            method = aClass.getDeclaredMethod("test1");
+            method = aClass.getDeclaredMethod("advise");
             return method;
         } catch (NoSuchMethodException e) {
             e.printStackTrace();

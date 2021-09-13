@@ -1,9 +1,7 @@
 package com.org.peysen.bootAop.aspectJ;
 
 import org.aspectj.lang.annotation.After;
-import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Pointcut;
-import org.springframework.stereotype.Component;
 
 /**
  * @Author : mengmeng.pei
@@ -35,8 +33,9 @@ public class ExecutionAspectJDemo {
     public void pointCut2(){}
 
     @After(value = "pointCut1()")
-    public void advise(){
-        System.out.println("advise end....");
+    public void advise(int a){
+        System.out.println("advise end...." + a);
     }
+
 }
 
