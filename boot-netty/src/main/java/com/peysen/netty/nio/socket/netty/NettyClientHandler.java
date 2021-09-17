@@ -16,6 +16,15 @@ public class NettyClientHandler extends ChannelInboundHandlerAdapter {
 
     @Override
     public void channelActive(ChannelHandlerContext ctx) throws Exception {
+        System.out.println(Thread.currentThread().getName());
+
+        ctx.channel().eventLoop().execute(new Runnable() {
+            @Override
+            public void run() {
+                System.out.println(Thread.currentThread().getName());
+            }
+        });
+
         ctx.channel().writeAndFlush(Unpooled.copiedBuffer("我是客户端pmm，服务端收到请回复。。", StandardCharsets.UTF_8));
     }
 
