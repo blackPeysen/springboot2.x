@@ -29,7 +29,9 @@ public class NettyServer {
                         @Override
                         protected void initChannel(SocketChannel channel) throws Exception {
                             ChannelPipeline pipeline = channel.pipeline();
-                            pipeline.addLast(new NettyServerHandler());
+                            pipeline.addLast(new NettyServerInboundHandler());
+                            pipeline.addLast(new NettyServerInboundHandler2());
+                            pipeline.addLast(new NettyServerOutboundHandler());
                         }
                     });
 
