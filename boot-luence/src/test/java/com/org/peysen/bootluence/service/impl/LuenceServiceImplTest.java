@@ -1,11 +1,14 @@
 package com.org.peysen.bootluence.service.impl;
 
 import com.org.peysen.bootluence.BootLuenceApplicationTests;
-import com.org.peysen.bootluence.service.ILuenceService;
+import com.org.peysen.bootluence.entity.DsGoods;
+import com.org.peysen.bootluence.service.ILuceneService;
+import org.apache.lucene.queryparser.classic.ParseException;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import static org.junit.Assert.*;
+import java.io.IOException;
+import java.util.List;
 
 /**
  * Author: peimengmeng
@@ -14,10 +17,28 @@ import static org.junit.Assert.*;
  */
 public class LuenceServiceImplTest extends BootLuenceApplicationTests {
     @Autowired
-    private ILuenceService luenceService;
+    private ILuceneService luenceService;
 
     @Test
     public void createIndex() {
-        luenceService.createIndex();
+        luenceService.createIndex(1619752L);
+    }
+
+    @Test
+    public void deleteProductIndexByIdTest() throws IOException {
+        luenceService.deleteProductIndexById("122101fuzhi");
+    }
+
+    @Test
+    public void searchProductTest(){
+        try {
+            List<DsGoods> dsGoodsList = luenceService.searchProduct("122101fuzhi");
+
+            System.out.println(dsGoodsList.size());
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
     }
 }

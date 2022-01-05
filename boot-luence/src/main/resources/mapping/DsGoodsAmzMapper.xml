@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.org.peysen.bootluence.dao.mapper.IDsGoodsAmzDAO" >
+
+    <resultMap id="BaseResultMap" type="com.org.peysen.bootluence.entity.DsGoodsAmz" >
+        <id column="AMZ_ID" property="amzId" jdbcType="DECIMAL" />
+        <result column="BUSI_ID" property="busiId" jdbcType="DECIMAL" />
+        <result column="GOODS_ID" property="goodsId" jdbcType="DECIMAL" />
+        <result column="PRODUCT_TYPE" property="productType" jdbcType="VARCHAR" />
+        <result column="AMZ_INFO" property="amzInfo" jdbcType="DECIMAL" />
+        <result column="DELETE_FLAG" property="deleteFlag" jdbcType="DECIMAL" />
+        <result column="ADDER_NO" property="adderNo" jdbcType="VARCHAR" />
+        <result column="ADDER_NAME" property="adderName" jdbcType="VARCHAR" />
+        <result column="ADD_TIME" property="addTime" jdbcType="TIMESTAMP" />
+        <result column="UPDATER_NO" property="updaterNo" jdbcType="VARCHAR" />
+        <result column="UPDATER_NAME" property="updaterName" jdbcType="VARCHAR" />
+        <result column="UPDATE_TIME" property="updateTime" jdbcType="TIMESTAMP" />
+    </resultMap>
+
+    <sql id="Base_Column_List" >
+        AMZ_ID, BUSI_ID, GOODS_ID, PRODUCT_TYPE, AMZ_INFO, DELETE_FLAG,
+        ADDER_NO, ADDER_NAME, ADD_TIME, UPDATER_NO, UPDATER_NAME, UPDATE_TIME
+    </sql>
+
+    <select id="getDsGoodsAmzMap" resultMap="BaseResultMap" >
+        select
+        <include refid="Base_Column_List" />
+        from SILKINFO.DS_GOODS_AMZ
+        where goods_id in
+        <foreach collection="goodsIds" open="(" close=")" separator="," item="goodsId">
+            #{goodsId,jdbcType=DECIMAL}
+        </foreach>
+        and DELETE_FLAG = 0
+    </select>
+
+    <select id="getGoodsAmzByGoodsId" resultMap="BaseResultMap" >
+        select
+        <include refid="Base_Column_List" />
+        from SILKINFO.DS_GOODS_AMZ
+        where GOODS_ID = #{goodsId,jdbcType=DECIMAL}
+        and DELETE_FLAG = 0
+    </select>
+
+
+
+</mapper>

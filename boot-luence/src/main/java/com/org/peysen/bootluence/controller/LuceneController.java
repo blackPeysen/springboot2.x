@@ -1,6 +1,6 @@
 package com.org.peysen.bootluence.controller;
 
-import com.org.peysen.bootluence.service.ILuenceService;
+import com.org.peysen.bootluence.service.ILuceneService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -11,15 +11,15 @@ import org.springframework.web.bind.annotation.RestController;
  * Desc:
  */
 @RestController
-public class LuenceController {
+public class LuceneController {
 
     @Autowired
-    private ILuenceService luenceService;
+    private ILuceneService luenceService;
 
     @PostMapping("/createIndex")
     public String createIndex(){
 
-        luenceService.createIndex();
+        luenceService.createIndex(1619752L);
 
         return "success";
     }

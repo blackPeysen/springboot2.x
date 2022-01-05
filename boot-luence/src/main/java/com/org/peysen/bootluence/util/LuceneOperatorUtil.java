@@ -18,7 +18,7 @@ import java.io.IOException;
  * Date: 2022/1/4 9:40
  * Desc:
  */
-public class LuenceOperatorUtil {
+public class LuceneOperatorUtil {
 
     /**
      * 创建索引
