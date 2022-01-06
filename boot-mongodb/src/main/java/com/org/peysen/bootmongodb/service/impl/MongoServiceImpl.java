@@ -1,4 +1,4 @@
-package com.org.peysen.bootmongodb.service;
+package com.org.peysen.bootmongodb.service.impl;
 
 import com.org.peysen.bootmongodb.domain.User;
 import org.springframework.beans.factory.annotation.Autowired;
