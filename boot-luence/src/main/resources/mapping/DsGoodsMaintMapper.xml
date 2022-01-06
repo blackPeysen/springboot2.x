@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.org.peysen.bootluence.dao.mapper.IDsGoodsMaintDAO" >
+
+    <resultMap id="BaseResultMap" type="com.org.peysen.bootluence.entity.DsGoods" >
+        <id column="GOODS_ID" property="goodsId" jdbcType="DECIMAL" />
+        <result column="BUSI_ID" property="busiId" jdbcType="DECIMAL" />
+        <result column="SPU_CODE" property="spuCode" jdbcType="VARCHAR" />
+        <result column="GOODS_NAME" property="goodsName" jdbcType="VARCHAR" />
+        <result column="EDIT_CAT_ID" property="editCatId" jdbcType="DECIMAL" />
+        <result column="GOODS_STATUS" property="goodsStatus" jdbcType="DECIMAL" />
+        <result column="GOODS_SELL_STATUS" property="goodsSellStatus" jdbcType="DECIMAL" />
+        <result column="BRAND" property="brand" jdbcType="VARCHAR" />
+        <result column="KEYWORDS" property="keywords" jdbcType="VARCHAR" />
+        <result column="PROCESSING_TIME" property="processingTime" jdbcType="DECIMAL" />
+        <result column="SHIPPING_LIMITATIONS" property="shippingLimitations" jdbcType="VARCHAR" />
+        <result column="CERIFICATE_IDS" property="cerificateIds" jdbcType="VARCHAR" />
+        <result column="AVAILABLE_REGIONS" property="availableRegions" jdbcType="VARCHAR" />
+        <result column="DATA_UPDATE_TIME" property="dataUpdateTime" jdbcType="TIMESTAMP" />
+        <result column="ADDER_NO" property="adderNo" jdbcType="VARCHAR" />
+        <result column="ADDER_NAME" property="adderName" jdbcType="VARCHAR" />
+        <result column="ADD_TIME" property="spuAddTime" jdbcType="TIMESTAMP" />
+        <result column="UPDATER_NO" property="updaterNo" jdbcType="VARCHAR" />
+        <result column="UPDATER_NAME" property="updaterName" jdbcType="VARCHAR" />
+        <result column="UPDATE_TIME" property="spuUpdateTime" jdbcType="TIMESTAMP" />
+        <result column="CHECKER_NO" property="checkerNo" jdbcType="VARCHAR" />
+        <result column="CHECKER_NAME" property="checkerName" jdbcType="VARCHAR" />
+        <result column="CHECK_TIME" property="checkTime" jdbcType="TIMESTAMP" />
+        <result column="SUPPORTED_PLATFORMS" property="supportedPlatforms" jdbcType="VARCHAR" />
+        <result column="NOT_SUPPORTED_PFS" property="notSupportedPlatforms" jdbcType="VARCHAR" />
+        <result column="VARIATION_PROPS" property="variationProps" jdbcType="VARCHAR" />
+        <result column="SELLING_POINTS" property="sellingPoints" jdbcType="VARCHAR" />
+        <result column="RETURN_ADVISE_CN" property="returnAdviseCn" jdbcType="VARCHAR" />
+        <result column="RETURN_ADVISE_EN" property="returnAdviseEn" jdbcType="VARCHAR" />
+    </resultMap>
+
+    <sql id="Base_Column_List" >
+        GOODS_ID, BUSI_ID, SITE_ID, SPU_CODE, GOODS_NAME, EDIT_CAT_ID, GOODS_STATUS, GOODS_SELL_STATUS, BRAND,
+        KEYWORDS, PROCESSING_TIME, SHIPPING_LIMITATIONS, AVAILABLE_REGIONS, DATA_UPDATE_TIME, ADDER_NO, ADDER_NAME, ADD_TIME,
+        UPDATER_NO, UPDATER_NAME, UPDATE_TIME, CHECKER_NO, CHECKER_NAME, CHECK_TIME, SUPPORTED_PLATFORMS, NOT_SUPPORTED_PFS,
+        VARIATION_PROPS, COMMON_PROPS, SELLING_POINTS, RETURN_ADVISE_CN, RETURN_ADVISE_EN,NOT_SUPPORTED_PFS, CERIFICATE_IDS
+    </sql>
+
+    <sql id="paginationStart">
+        <![CDATA[
+        	select * from (select row_.*, rownum rownum_ from (
+        ]]>
+    </sql>
+
+    <sql id="paginationEnd">
+        <![CDATA[
+    	    )row_ where rownum <= #{condition.max,jdbcType=DECIMAL} ) where rownum_ >= #{condition.min,jdbcType=DECIMAL}
+        ]]>
+    </sql>
+
+    <select id="getGoodsBasicInfo" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+        select
+            <include refid="Base_Column_List" />
+        from SILKINFO.DS_GOODS_M
+        where GOODS_ID = #{goodsId,jdbcType=DECIMAL}
+            and GOODS_STATUS not in (4, 5)
+    </select>
+
+
+</mapper>

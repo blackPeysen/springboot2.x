@@ -1,0 +1,28 @@
+luence:
+  index:
+    dir: E:\\dev\\luence\\index
+
+server:
+  port: 8080
+
+spring:
+  datasource:
+    username: silkinfo
+    password: test1234
+    url: jdbc:oracle:thin:@192.168.17.49:1521:silk
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+
+mybatis:
+  mapper-locations: classpath:mapping/*Mapper.xml
+  type-aliases-package: com.org.peysen.bootluence.entity
+
+#showSql
+logging:
+  level:
+    com:
+      org:
+        bootluence :
+          dao:
+            mapper: debug
+
+

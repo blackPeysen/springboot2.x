@@ -4,6 +4,7 @@ import io.netty.bootstrap.ServerBootstrap;
 import io.netty.buffer.PooledByteBufAllocator;
 import io.netty.channel.*;
 import io.netty.channel.nio.NioEventLoopGroup;
+import io.netty.channel.socket.ServerSocketChannel;
 import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioServerSocketChannel;
 
@@ -25,11 +26,20 @@ public class NettyServer {
                     .channel(NioServerSocketChannel.class)
                     .childOption(ChannelOption.ALLOCATOR, PooledByteBufAllocator.DEFAULT)
                     .childOption(ChannelOption.SO_KEEPALIVE, Boolean.TRUE)
+                    .handler(new ChannelInitializer<ServerSocketChannel>() {
+                        @Override
+                        protected void initChannel(ServerSocketChannel ch) throws Exception {
+                            ChannelPipeline pipeline = ch.pipeline();
+                            pipeline.addLast(new NettyServerInboundHandler1());
+                        }
+                    })
                     .childHandler(new ChannelInitializer<SocketChannel>() {
                         @Override
                         protected void initChannel(SocketChannel channel) throws Exception {
                             ChannelPipeline pipeline = channel.pipeline();
-                            pipeline.addLast(new NettyServerHandler());
+                            pipeline.addLast(new NettyServerInboundHandler());
+                            pipeline.addLast(new NettyServerInboundHandler2());
+                            pipeline.addLast(new NettyServerOutboundHandler());
                         }
                     });
 

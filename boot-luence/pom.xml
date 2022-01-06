@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.org.peysen</groupId>
+        <artifactId>springboot</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
+    <groupId>com.org.peysen</groupId>
+    <artifactId>boot-luence</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>boot-luence</name>
+    <description>Demo project for Spring Boot</description>
+
+    <properties>
+        <java.version>1.8</java.version>
+        <ojdbc.version>6</ojdbc.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.org.peysen</groupId>
+            <artifactId>boot-common</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.mybatis.spring.boot</groupId>
+            <artifactId>mybatis-spring-boot-starter</artifactId>
+            <version>2.1.3</version>
+        </dependency>
+        <dependency>
+            <groupId>ojdbc</groupId>
+            <artifactId>ojdbc</artifactId>
+            <version>${ojdbc.version}</version>
+        </dependency>
+
+        <!--引入工具包-->
+        <dependency>
+            <groupId>cn.hutool</groupId>
+            <artifactId>hutool-all</artifactId>
+            <version>5.1.0</version>
+        </dependency>
+
+        <!-- 引入lucene -->
+        <dependency>
+            <groupId>org.apache.lucene</groupId>
+            <artifactId>lucene-core</artifactId>
+            <version>7.4.0</version>
+        </dependency>
+
+        <!--对分词索引查询解析-->
+        <dependency>
+        <groupId>org.apache.lucene</groupId>
+        <artifactId>lucene-queryparser</artifactId>
+        <version>7.4.0</version>
+        </dependency>
+
+        <!--一般分词器，适用于英文分词-->
+        <dependency>
+            <groupId>org.apache.lucene</groupId>
+            <artifactId>lucene-analyzers-common</artifactId>
+            <version>7.4.0</version>
+        </dependency>
+
+        <!--检索关键字高亮显示 -->
+        <dependency>
+            <groupId>org.apache.lucene</groupId>
+            <artifactId>lucene-highlighter</artifactId>
+            <version>7.4.0</version>
+        </dependency>
+        <!-- smartcn中文分词器 -->
+        <dependency>
+            <groupId>org.apache.lucene</groupId>
+            <artifactId>lucene-analyzers-smartcn</artifactId>
+            <version>7.4.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+            <scope>runtime</scope>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <excludes>
+                        <exclude>
+                            <groupId>org.projectlombok</groupId>
+                            <artifactId>lombok</artifactId>
+                        </exclude>
+                    </excludes>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

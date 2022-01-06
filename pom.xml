@@ -24,6 +24,7 @@
         <module>boot-gof23</module>
         <module>boot-kafka</module>
         <module>boot-netty</module>
+        <module>boot-luence</module>
     </modules>
 
     <groupId>com.org.peysen</groupId>
