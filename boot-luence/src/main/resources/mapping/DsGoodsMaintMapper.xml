@@ -61,5 +61,13 @@
             and GOODS_STATUS not in (4, 5)
     </select>
 
+    <select id="listDsGoods" resultMap="BaseResultMap">
+        select
+            <include refid="Base_Column_List" />
+        from SILKINFO.DS_GOODS_M
+        where BUSI_ID = #{busiId,jdbcType=DECIMAL}
+            and GOODS_STATUS not in (4, 5)
+    </select>
+
 
 </mapper>

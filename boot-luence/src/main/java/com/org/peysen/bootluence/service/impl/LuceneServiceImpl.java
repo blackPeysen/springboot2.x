@@ -8,6 +8,7 @@ import org.apache.lucene.queryparser.classic.ParseException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
+import org.springframework.util.CollectionUtils;
 
 import java.io.IOException;
 import java.util.List;
@@ -28,8 +29,6 @@ public class LuceneServiceImpl implements ILuceneService {
     @Autowired
     private IDsGoodsService dsGoodsService;
 
-    @Override
-    public void synProductCreatIndex() throws IOException { }
 
     @Override
     public List<DsGoods> searchProduct(String productName) throws IOException, ParseException {
@@ -52,6 +51,20 @@ public class LuceneServiceImpl implements ILuceneService {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    @Override
+    public void synProductCreatIndex(Long busiId) throws IOException {
+        if (Objects.isNull(busiId)){
+            return;
+        }
+
+        List<DsGoods> dsGoodsList = dsGoodsService.getDsGoodsList(busiId);
+        if (CollectionUtils.isEmpty(dsGoodsList)){
+            return;
+        }
+
+//        luceneDao.createProductIndex(dsGoodsList);
     }
 
 }

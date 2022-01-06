@@ -20,7 +20,7 @@ public interface ILuceneService {
      * 全量更新商品索引
      * @throws IOException
      */
-    void synProductCreatIndex() throws IOException;
+    void synProductCreatIndex(Long busiId) throws IOException;
 
 
     /**
