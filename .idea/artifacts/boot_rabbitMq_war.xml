@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="war" name="boot-rabbitMq:war">
-    <output-path>$PROJECT_DIR$/boot-rabbitMq/target</output-path>
-    <root id="archive" name="boot-rabbitMq.war">
-      <element id="artifact" artifact-name="boot-rabbitMq:war exploded" />
-    </root>
-  </artifact>
-</component>

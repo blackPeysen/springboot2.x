@@ -1,6 +1,0 @@
-
-Nsquid:S2589+"7Remove this expression which always evaluates to "true"(ãÿ‡
-hsquid:UselessImportCheck"?Remove this unused import 'java.util.concurrent.BlockingDeque'.(ºÓÍêÿÿÿÿÿ
-jsquid:ModifiersOrderCheck"EReorder the modifiers to comply with the Java Language Specification.(÷¦Úƒ
-P
-squid:S8993":Do something with the "boolean" value returned by "offer".(èêø

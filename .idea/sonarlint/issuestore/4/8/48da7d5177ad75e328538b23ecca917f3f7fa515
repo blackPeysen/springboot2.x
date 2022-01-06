@@ -1,8 +1,0 @@
-
-[
-squid:S106"9Replace this use of System.out or System.err by a logger.(½İ¹İÿÿÿÿÿ8÷üÁ‹û-
-Fsquid:S1148W"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8Ëë¥Šû-
-bsquid:S2147X"DCombine this catch with the one at line 86, which has the same body.(ï­£Ä8Ëë¥Šû-
-Fsquid:S1148Y"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8Ëë¥Šû-
-Xsquid:S1075"ARefactor your code to get this URI from a customizable parameter.(¬¾…
-esquid:S00101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(¬†“»

@@ -1,15 +1,0 @@
-
-isquid:CommentedOutCodeLine!"<This block of commented-out lines of code should be removed.(ïÜçØ8žŒÊ¬Š.
-isquid:CommentedOutCodeLine#"<This block of commented-out lines of code should be removed.(ÆˆÂš8øŽÕ¬Š.
-[
-squid:S106"9Replace this use of System.out or System.err by a logger.(©‹©Íûÿÿÿÿ8ºÏ”¬Š.
-Bsquid:S1659"Declare "b" on a separate line.(äöÍÖþÿÿÿÿ8ÄŽ¬Š.
-[
-squid:S106"9Replace this use of System.out or System.err by a logger.(È¨Íùýÿÿÿÿ8âå¬Š.
-Zsquid:S1481"7Remove this unused "threadPoolExecutor" local variable.(í²öòÿÿÿÿÿ8øŽÕ¬Š.
-Asquid:S1148I"#Use a logger to log this exception.(ë¯Ôì8žŒÊ¬Š.
-nsquid:CommentedOutCodeLine)"<This block of commented-out lines of code should be removed.(ÂÝ‰Ûùÿÿÿÿ8ŒÔ¬Š.
-esquid:S2184"BCast one of the operands of this division operation to a "double".(ÙŽ„Ãüÿÿÿÿ8âå¬Š.
-Fsquid:S1604C"(Make this anonymous inner class a lambda(ïÑ¬ 8žŒÊ¬Š.
-nsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(‹¾«Ïøÿÿÿÿ8žŒÊ¬Š.
-nsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(ÐÆ¡úÿÿÿÿ8žŒÊ¬Š.
