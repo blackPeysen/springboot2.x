@@ -1,6 +1,6 @@
 <component name="ArtifactManager">
   <artifact type="war" name="boot-sharding:war">
-    <output-path>$PROJECT_DIR$/boot-sharding/target</output-path>
+    <output-path>$PROJECT_DIR$/../target</output-path>
     <properties id="maven-jee-properties">
       <options>
         <module>boot-sharding</module>

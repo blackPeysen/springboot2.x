@@ -12,17 +12,24 @@
         <module name="boot-context" />
         <module name="boot-email" />
         <module name="boot-webflux" />
-        <module name="boot-gof23" />
-        <module name="boot-sharding" />
-        <module name="boot-aop" />
         <module name="bootasynMvc" />
-        <module name="boot-kafka" />
+        <module name="boot-luence" />
         <module name="boot-zk" />
         <module name="boot-mvc" />
         <module name="boot-mybatis" />
         <module name="boot-common" />
         <module name="boot-shiro" />
         <module name="boot-aync-mvc" />
+        <module name="boot-mongodb" />
+      </profile>
+      <profile name="Annotation profile for springboot" enabled="true">
+        <sourceOutputDir name="../../target/generated-sources/annotations" />
+        <sourceTestOutputDir name="../../target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="boot-kafka" />
+        <module name="boot-gof23" />
+        <module name="boot-sharding" />
+        <module name="boot-aop" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="8">
@@ -35,6 +42,9 @@
       <module name="boot-gof23" target="1.8" />
       <module name="boot-jdk8" target="8" />
       <module name="boot-kafka" target="1.8" />
+      <module name="boot-luence" target="1.8" />
+      <module name="boot-mongo" target="1.7" />
+      <module name="boot-mongodb" target="1.8" />
       <module name="boot-mvc" target="8" />
       <module name="boot-mybatis" target="1.8" />
       <module name="boot-netty" target="1.8" />
@@ -57,6 +67,8 @@
       <module name="boot-email" options="-parameters" />
       <module name="boot-gof23" options="-parameters" />
       <module name="boot-kafka" options="-parameters" />
+      <module name="boot-mongo" options="-parameters" />
+      <module name="boot-mongodb" options="-parameters" />
       <module name="boot-mvc" options="-parameters" />
       <module name="boot-mybatis" options="-parameters" />
       <module name="boot-netty" options="-parameters" />

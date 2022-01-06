@@ -1,9 +1,9 @@
 package com.peysen.bootshiro.config;
 
-import com.org.peysen.bootshiro.cache.RedisCache;
-import com.org.peysen.bootshiro.cache.RedisCacheManager;
-import com.org.peysen.bootshiro.session.CustomSessionManager;
-import com.org.peysen.bootshiro.session.RedisSessionDao;
+import com.peysen.bootshiro.cache.RedisCache;
+import com.peysen.bootshiro.cache.RedisCacheManager;
+import com.peysen.bootshiro.session.CustomSessionManager;
+import com.peysen.bootshiro.session.RedisSessionDao;
 import com.peysen.bootshiro.filter.RolesOrFilter;
 import org.apache.commons.collections.map.HashedMap;
 import org.apache.shiro.authc.credential.HashedCredentialsMatcher;

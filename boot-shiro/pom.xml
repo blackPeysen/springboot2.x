@@ -6,7 +6,7 @@
         <artifactId>springboot</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
-    <groupId>com.peysen</groupId>
+    <groupId>com.org.peysen</groupId>
     <artifactId>boot-shiro</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>boot-shiro</name>

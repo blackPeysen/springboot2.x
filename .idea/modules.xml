@@ -9,6 +9,8 @@
       <module fileurl="file://$PROJECT_DIR$/boot-email/boot-email.iml" filepath="$PROJECT_DIR$/boot-email/boot-email.iml" />
       <module fileurl="file://$PROJECT_DIR$/boot-gof23/boot-gof23.iml" filepath="$PROJECT_DIR$/boot-gof23/boot-gof23.iml" />
       <module fileurl="file://$PROJECT_DIR$/boot-kafka/boot-kafka.iml" filepath="$PROJECT_DIR$/boot-kafka/boot-kafka.iml" />
+      <module fileurl="file://$PROJECT_DIR$/boot-luence/boot-luence.iml" filepath="$PROJECT_DIR$/boot-luence/boot-luence.iml" />
+      <module fileurl="file://$PROJECT_DIR$/boot-mongodb/boot-mongodb.iml" filepath="$PROJECT_DIR$/boot-mongodb/boot-mongodb.iml" />
       <module fileurl="file://$PROJECT_DIR$/boot-mvc/boot-mvc.iml" filepath="$PROJECT_DIR$/boot-mvc/boot-mvc.iml" />
       <module fileurl="file://$PROJECT_DIR$/boot-mybatis/boot-mybatis.iml" filepath="$PROJECT_DIR$/boot-mybatis/boot-mybatis.iml" />
       <module fileurl="file://$PROJECT_DIR$/boot-netty/boot-netty.iml" filepath="$PROJECT_DIR$/boot-netty/boot-netty.iml" />
