@@ -56,7 +56,7 @@ public class LuceneQueryServiceImplTest extends BootLuenceApplicationTests {
 
     @Test
     public void searchProductByParserTest() throws IOException, ParseException {
-        List<DsGoods> dsGoodsList = leceneQueryService.searchProductByParser("sets03 -keywords:bridge");
+        List<DsGoods> dsGoodsList = leceneQueryService.searchProductByParser("Food and Beverage01");
 
         System.out.println(dsGoodsList.size());
     }

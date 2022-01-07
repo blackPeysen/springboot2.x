@@ -164,7 +164,7 @@ public class LuceneDaoImpl implements ILuceneDao {
         searcherManager.maybeRefresh();
         IndexSearcher indexSearcher = searcherManager.acquire();
 
-        QueryParser parser = new QueryParser("productName", analyzer);
+        QueryParser parser = new QueryParser(fieldName, analyzer);
         Query query = parser.parse(productName);
 
         TopDocs topDocs = indexSearcher.search(query, 10);
