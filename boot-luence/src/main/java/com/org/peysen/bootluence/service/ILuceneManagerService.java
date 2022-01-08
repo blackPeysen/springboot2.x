@@ -1,17 +1,13 @@
 package com.org.peysen.bootluence.service;
 
-import com.org.peysen.bootluence.entity.DsGoods;
-import org.apache.lucene.queryparser.classic.ParseException;
-
 import java.io.IOException;
-import java.util.List;
 
 /**
  * Author: peimengmeng
  * Date: 2022/1/4 9:35
  * Desc:
  */
-public interface ILuceneService {
+public interface ILuceneManagerService {
 
     void createIndex(Long goodsId);
 
@@ -22,15 +18,13 @@ public interface ILuceneService {
      */
     void synProductCreatIndex(Long busiId) throws IOException;
 
-
     /**
+     * 更新一个索引
      *
-     * @param productName
-     * @return
+     * @param goodsId
      * @throws IOException
-     * @throws ParseException
      */
-    List<DsGoods> searchProduct(String productName) throws IOException, ParseException;
+    void updateProductIndex(Long goodsId) throws IOException;
 
     /**
      * 通过id删除商品索引
@@ -38,4 +32,10 @@ public interface ILuceneService {
      * @throws IOException
      */
     void deleteProductIndexById(String id) throws IOException;
+
+    /**
+     * 删除所有的商品索引
+     */
+    void deleleAllProduct() throws IOException;
+
 }
