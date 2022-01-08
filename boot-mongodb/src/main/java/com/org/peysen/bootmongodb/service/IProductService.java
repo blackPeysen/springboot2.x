@@ -2,6 +2,9 @@ package com.org.peysen.bootmongodb.service;
 
 import com.org.peysen.bootmongodb.domain.Product;
 import org.bson.types.ObjectId;
+import org.springframework.data.domain.Page;
+
+import java.util.List;
 
 /**
  * @Auther: peimengmeng
@@ -12,5 +15,7 @@ public interface IProductService {
 
     ObjectId saveProduct(Product product);
 
-    Product queryProduct(String productName);
+    List<Product> queryProduct(String productName);
+
+    Page<Product> pageQueryProduct();
 }

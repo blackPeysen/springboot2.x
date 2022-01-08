@@ -3,8 +3,10 @@ package com.org.peysen.bootmongodb.domain;
 import lombok.Data;
 import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -32,4 +34,12 @@ public class Product {
     private double averageReviews;
 
     private List<String> tags;
+
+    private ProductSize productSize;
+
+    /**
+     * 创建索引，TTL集合
+     */
+    @Indexed(expireAfterSeconds = 3600)
+    private Date createDate;
 }
