@@ -10,6 +10,8 @@ import org.springframework.stereotype.Service;
 import java.io.IOException;
 import java.util.List;
 
+import static com.org.peysen.bootluence.constants.ProductConstants.*;
+
 /**
  * Author: peimengmeng
  * Date: 2022/1/7 9:33
@@ -17,9 +19,6 @@ import java.util.List;
  */
 @Service
 public class LuceneQueryServiceImpl implements ILeceneQueryService {
-    private final static String KEYWORDS_FIELD = "keywords";
-    private final static String PRODUCT_NAME_FIELD = "productName";
-    private final static String PROCESSINGTIME_FIELD = "processingTime";
 
     @Autowired
     private ILuceneDao luceneDao;

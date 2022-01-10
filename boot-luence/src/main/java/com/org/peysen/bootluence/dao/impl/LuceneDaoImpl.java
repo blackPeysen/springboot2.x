@@ -176,7 +176,6 @@ public class LuceneDaoImpl implements ILuceneDao {
     }
 
 
-
     /**
      * 创建商品对应的文档Document
      *
@@ -189,8 +188,10 @@ public class LuceneDaoImpl implements ILuceneDao {
         doc.add(new LongPoint("productId", dsGoods.getGoodsId()));
         doc.add(new StoredField("productId", dsGoods.getGoodsId()));
 
+
         doc.add(new IntPoint("processingTime", dsGoods.getProcessingTime()));
         doc.add(new StoredField("processingTime", dsGoods.getProcessingTime()));
+        doc.add(new NumericDocValuesField("processingTime", dsGoods.getProcessingTime()));
 
         doc.add(new TextField("productName", dsGoods.getGoodsName(), Field.Store.YES));
         doc.add(new TextField("keywords", dsGoods.getKeywords(), Field.Store.YES));

@@ -104,13 +104,15 @@ public class LuceneConfig {
     @Bean
     public SearcherManager searcherManager(Directory directory, IndexWriter indexWriter) throws IOException {
         SearcherManager searcherManager = new SearcherManager(indexWriter, false, false, new SearcherFactory());
+
         ControlledRealTimeReopenThread cRTReopenThead = new ControlledRealTimeReopenThread(indexWriter, searcherManager, 5.0, 0.025);
         cRTReopenThead.setDaemon(true);
         //线程名称
         cRTReopenThead.setName("更新IndexReader线程");
         // 开启线程
         cRTReopenThead.start();
-        System.out.println("定时任务开启中........."+new Date());
+        System.out.println("定时任务开启中........." + new Date());
+
         return searcherManager;
     }
  
