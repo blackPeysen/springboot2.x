@@ -26,6 +26,7 @@
         <module>boot-netty</module>
         <module>boot-mongodb</module>
         <module>boot-luence</module>
+        <module>boot-elasticsearch</module>
     </modules>
 
     <groupId>com.org.peysen</groupId>
