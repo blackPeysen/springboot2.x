@@ -1,6 +1,6 @@
 package com.org.peysen.bootmongodb.controller;
 
-import com.org.peysen.bootmongodb.service.MongoServiceImpl;
+import com.org.peysen.bootmongodb.service.impl.MongoServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
