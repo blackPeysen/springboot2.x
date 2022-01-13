@@ -1,7 +1,12 @@
 package com.org.peysen.bootluence.config;
 
+import com.org.peysen.bootluence.analyzer.SynonyAnalyzer;
+import com.org.peysen.bootluence.service.ISynonyEngine;
+import com.org.peysen.bootluence.service.impl.SynonyEngineImpl;
 import org.apache.lucene.analysis.Analyzer;
 import org.apache.lucene.analysis.cn.smart.SmartChineseAnalyzer;
+import org.apache.lucene.analysis.core.StopAnalyzer;
+import org.apache.lucene.analysis.core.WhitespaceAnalyzer;
 import org.apache.lucene.analysis.standard.StandardAnalyzer;
 import org.apache.lucene.index.IndexWriter;
 import org.apache.lucene.index.IndexWriterConfig;
@@ -29,33 +34,34 @@ public class LuceneConfig {
     @Value("${luence.index.dir}")
     private String indexPath;
 
-    /**
-     * 创建一个 Analyzer 实例
-     * 中文智能分词
-     * @return
-     */
 
-    @Bean
+    @Bean(name = "stopAnalyzer")
+    public Analyzer stopAnalyzer(){
+        return new StopAnalyzer();
+    }
+
+    @Bean(name = "standardAnalyzer")
+    public Analyzer standardAnalyzer() {
+        return new StandardAnalyzer();
+    }
+ 
+    @Bean(name = "smartChineseAnalyzer")
     public Analyzer smartChineseAnalyzer() {
         return new SmartChineseAnalyzer(false);
     }
  
-    /**
-     * 类似于模糊搜索
-     *
-     * @return
-     */
-    @Bean(name = "analyzer")
-    public Analyzer analyzer() {
-        return new StandardAnalyzer();
+    @Bean(name = "whitespaceAnalyzer")
+    public Analyzer whitespaceAnalyzer(){
+        return new WhitespaceAnalyzer();
     }
- 
-    @Bean(name = "smartAnalyzer")
-    public Analyzer smartAnalyzer() {
-        return new SmartChineseAnalyzer(false);
+
+    @Bean(name = "synonyAnalyzer")
+    public Analyzer synonyAnalyzer(){
+        ISynonyEngine synonyEngine = new SynonyEngineImpl();
+        return new SynonyAnalyzer(synonyEngine);
     }
- 
- 
+
+
     /**
      * 索引位置
      *
@@ -78,13 +84,13 @@ public class LuceneConfig {
      * 创建indexWriter
      *
      * @param directory
-     * @param analyzer
+     * @param standardAnalyzer
      * @return
      * @throws IOException
      */
     @Bean
-    public IndexWriter indexWriter(Directory directory, Analyzer analyzer) throws IOException {
-        IndexWriterConfig indexWriterConfig = new IndexWriterConfig(analyzer);
+    public IndexWriter indexWriter(Directory directory, Analyzer standardAnalyzer) throws IOException {
+        IndexWriterConfig indexWriterConfig = new IndexWriterConfig(standardAnalyzer);
 
         IndexWriter indexWriter = new IndexWriter(directory, indexWriterConfig);
         // 清空索引

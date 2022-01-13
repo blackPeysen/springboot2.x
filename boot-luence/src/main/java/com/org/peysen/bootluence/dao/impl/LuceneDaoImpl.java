@@ -27,7 +27,7 @@ import java.util.List;
 public class LuceneDaoImpl implements ILuceneDao {
 
     @Autowired
-    private Analyzer analyzer;
+    private Analyzer standardAnalyzer;
     @Autowired
     private IndexWriter indexWriter;
     @Autowired
@@ -164,7 +164,7 @@ public class LuceneDaoImpl implements ILuceneDao {
         searcherManager.maybeRefresh();
         IndexSearcher indexSearcher = searcherManager.acquire();
 
-        QueryParser parser = new QueryParser(fieldName, analyzer);
+        QueryParser parser = new QueryParser(fieldName, standardAnalyzer);
         Query query = parser.parse(productName);
 
         TopDocs topDocs = indexSearcher.search(query, 10);

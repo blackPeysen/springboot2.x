@@ -2,14 +2,8 @@ package com.org.peysen.bootluence.service.impl;
 
 import com.org.peysen.bootluence.entity.DsGoods;
 import com.org.peysen.bootluence.service.ILuceneSeniorQueryService;
-import org.apache.lucene.analysis.Analyzer;
-import org.apache.lucene.analysis.TokenStream;
-import org.apache.lucene.analysis.tokenattributes.TermFrequencyAttribute;
-import org.apache.lucene.analysis.tokenattributes.TermFrequencyAttributeImpl;
 import org.apache.lucene.document.Document;
 import org.apache.lucene.document.IntPoint;
-import org.apache.lucene.index.IndexReader;
-import org.apache.lucene.index.IndexWriter;
 import org.apache.lucene.index.LeafReaderContext;
 import org.apache.lucene.index.Term;
 import org.apache.lucene.search.*;
@@ -18,7 +12,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.io.IOException;
-import java.io.StringReader;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -36,10 +29,6 @@ import static org.apache.lucene.search.DocIdSetIterator.NO_MORE_DOCS;
  */
 @Service
 public class LuceneSeniorQueryServiceImpl implements ILuceneSeniorQueryService {
-    @Autowired
-    private Analyzer analyzer;
-    @Autowired
-    private IndexWriter indexWriter;
     @Autowired
     private SearcherManager searcherManager;
 
