@@ -1,0 +1,22 @@
+server:
+  port: 8888
+
+spring:
+  datasource:
+    username: silkinfo
+    password: test1234
+    url: jdbc:oracle:thin:@192.168.17.49:1521:silk
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+
+#  data:
+#    elasticsearch:
+#      cluster-nodes: localhost:9200
+
+mybatis:
+  mapper-locations: classpath:mapping/*Mapper.xml
+  type-aliases-package: com.org.peysen.bootluence.entity
+
+elasticsearch:
+  cluster-nodes: 127.0.0.1:9300
+  cluster-password: elastic:elastic
+  client-transport-sniff: false
