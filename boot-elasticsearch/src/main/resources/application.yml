@@ -17,6 +17,12 @@ mybatis:
   type-aliases-package: com.org.peysen.bootluence.entity
 
 elasticsearch:
-  cluster-nodes: 127.0.0.1:9300
+  cluster-nodes: 127.0.0.1
   cluster-password: elastic:elastic
   client-transport-sniff: false
+
+
+es:
+  clusterNodes: 10.110.8.188:9200,10.110.8.189:9200,10.110.8.186:9200
+  user: elastic
+  password: logbus123

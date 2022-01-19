@@ -14,6 +14,7 @@ import org.elasticsearch.client.RestClient;
 import org.elasticsearch.client.RestClientBuilder;
 import org.elasticsearch.client.RestHighLevelClient;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.stereotype.Component;
 
@@ -36,16 +37,16 @@ import java.util.List;
  * Date: 2022/1/17 10:09
  * Desc:
  */
-@Component
 @Slf4j
+@Configuration
 public class ElasticRestHighLevelClient {
 
     @Autowired
     private EsProperties esProperties;
-    private RestHighLevelClient client;
 
-//    @PostConstruct
-    public void init() {
+    @Bean
+    public RestHighLevelClient client() {
+        RestHighLevelClient client = null;
         try {
             List<HttpHost> hosts = parseClusterNodes(esProperties.getProtocol(), esProperties.getClusterNodes());
             client = createClient(hosts, esProperties.getUser(), esProperties.getPassword(), esProperties.getTrustStorePath(), esProperties.getTrustStorePass());
@@ -53,6 +54,8 @@ public class ElasticRestHighLevelClient {
         catch (Exception e) {
             System.out.println("ES Client init failed." +  e);
         }
+
+        return client;
     }
 
     public static List<HttpHost> parseClusterNodes(String protocol, String nodes) {
