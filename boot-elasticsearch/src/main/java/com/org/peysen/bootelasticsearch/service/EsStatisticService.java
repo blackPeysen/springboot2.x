@@ -14,14 +14,13 @@ import org.elasticsearch.common.Strings;
 import org.elasticsearch.index.query.*;
 import org.elasticsearch.rest.RestStatus;
 import org.elasticsearch.search.SearchHit;
-import org.elasticsearch.search.aggregations.AggregationBuilder;
-import org.elasticsearch.search.aggregations.AggregationBuilders;
-import org.elasticsearch.search.aggregations.Aggregations;
-import org.elasticsearch.search.aggregations.BucketOrder;
+import org.elasticsearch.search.aggregations.*;
 import org.elasticsearch.search.aggregations.bucket.terms.ParsedStringTerms;
 import org.elasticsearch.search.aggregations.bucket.terms.Terms;
 import org.elasticsearch.search.aggregations.bucket.terms.TermsAggregationBuilder;
+import org.elasticsearch.search.aggregations.metrics.ParsedCardinality;
 import org.elasticsearch.search.aggregations.metrics.ParsedSum;
+import org.elasticsearch.search.aggregations.metrics.ParsedValueCount;
 import org.elasticsearch.search.aggregations.metrics.SumAggregationBuilder;
 import org.elasticsearch.search.aggregations.pipeline.BucketSortPipelineAggregationBuilder;
 import org.elasticsearch.search.builder.SearchSourceBuilder;
@@ -60,11 +59,6 @@ public class EsStatisticService {
      *  页面展示时，分页查询，总条数。
      */
     public void search(String startDate, String endDate) throws IOException {
-        String[] indexArr = new String[]{"swcrov_endpoint_isv_stat-20220113",
-                "swcrov_endpoint_isv_stat-20220114",
-                "swcrov_endpoint_isv_stat-20220115",
-                "swcrov_endpoint_isv_stat-20220116"};
-
         SearchSourceBuilder sourceBuilder = new SearchSourceBuilder();
 
         // 设置分页
@@ -73,8 +67,8 @@ public class EsStatisticService {
 
         // 设置查询条件
         RangeQueryBuilder rangeQueryBuilder = QueryBuilders.rangeQuery("time_bucket");
-        rangeQueryBuilder.gte("20220113");
-        rangeQueryBuilder.lte("20220116");
+        rangeQueryBuilder.gte(startDate);
+        rangeQueryBuilder.lte(endDate);
 
         BoolQueryBuilder boolBuilder = QueryBuilders.boolQuery();
         boolBuilder.must(rangeQueryBuilder);
@@ -83,14 +77,18 @@ public class EsStatisticService {
 
         // 设置分组聚合
         sourceBuilder.aggregation(AggregationBuilders
-                .terms("agg") //terms为分组后的字段名称
+                .terms("app") //terms为分组后的字段名称
                 .field("app_key")   //app_key进行分组
                 .subAggregation(AggregationBuilders.sum("sum").field("total"))// subAggregation为子聚合
-                .subAggregation(new BucketSortPipelineAggregationBuilder("sum_sort", Arrays.asList(new FieldSortBuilder("sum").order(SortOrder.DESC)))
-                        .from(10)
+                .subAggregation(new BucketSortPipelineAggregationBuilder("sumSort", Arrays.asList(new FieldSortBuilder("sum").order(SortOrder.DESC)))
+                        .from(9)
                         .size(10))
-                .size(30));
+                .size(100));
 
+        // 根据app_key求总数
+        sourceBuilder.aggregation(AggregationBuilders.cardinality("appCount").field("app_key"));
+
+        // 设置查询的索引名称
         SearchRequest searchRequest = new SearchRequest("swcrov_endpoint_isv_stat");
         searchRequest.source(sourceBuilder);
 
@@ -98,11 +96,9 @@ public class EsStatisticService {
         RestStatus status = searchResponse.status();
 
         if (status.equals(RestStatus.OK)){
-            /**
-             * 解析数据，获取tag_tr的指标聚合参数。
-             */
             Aggregations aggregations = searchResponse.getAggregations();
-            ParsedStringTerms parsedStringTerms = aggregations.get("agg");
+
+            ParsedStringTerms parsedStringTerms = aggregations.get("app");
             List<? extends Terms.Bucket> buckets = parsedStringTerms.getBuckets();
             for (Terms.Bucket bucket : buckets) {
                 String key = bucket.getKey().toString();
@@ -112,8 +108,14 @@ public class EsStatisticService {
                 //获取数据
                 Aggregations bucketAggregations = bucket.getAggregations();
                 ParsedSum sumId = bucketAggregations.get("sum");
+
                 System.out.println(key + ": " + sumId.getValue());
             }
+
+            System.out.println("=============================");
+
+            ParsedCardinality appCount = aggregations.get("appCount");
+            System.out.println("appKeyCount: " + appCount.getValue());
         }
     }
 

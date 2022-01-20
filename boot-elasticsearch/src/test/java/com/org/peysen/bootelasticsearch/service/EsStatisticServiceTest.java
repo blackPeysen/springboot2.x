@@ -24,6 +24,6 @@ public class EsStatisticServiceTest extends BootElasticsearchApplicationTests {
 
     @Test
     public void searchTest() throws IOException {
-        esStatisticService.search("2021122", "2323");
+        esStatisticService.search("20220113", "20220119");
     }
 }
